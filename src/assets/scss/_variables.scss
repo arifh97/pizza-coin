@@ -1,0 +1,28 @@
+$black:#000;
+$white:#fff;
+$paragraph: #1D1B1B;
+$heading:#F8F6FD;
+$primary: #3561FF;
+$caption: #7AF0FF;
+$accent: #FB0135;
+$FFD331: #FFD331;
+$_1C1A1A: #1C1A1A;
+@font-face {
+    font-family: 'FormulaCondensedBold';
+    src: url('../fonts/FormulaCondensed-Bold.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FormulaCondensedLight';
+    src: url('../fonts/FormulaCondensed-Light.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+$font_Fredoka: "Fredoka", sans-serif;
+$font_FormulaCondensedLight: 'FormulaCondensedLight';
+$font_FormulaCondensedBold:'FormulaCondensedBold';

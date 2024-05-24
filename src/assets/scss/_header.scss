@@ -1,0 +1,130 @@
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.heading {
+    border-bottom: 2px solid #010000;
+    background: $white;
+    padding: var(--bs-navbar-padding-y) 0;
+    --bs-navbar-padding-y: 30px;
+    @include md {
+        --bs-navbar-padding-y: 0;
+    }
+    @include sm {
+        --bs-navbar-padding-y: 0;
+    }
+    &.position-fixed {
+        animation: headerAnimation .5s linear;
+        --bs-navbar-padding-y: 24px;
+        @include md {
+            --bs-navbar-padding-y: 20px;
+        }
+        @include sm {
+            --bs-navbar-padding-y: 0;
+        }
+    }
+    &-menu {
+        max-width: 360px;
+        padding: 4px;
+        border-radius: 8px;
+        border: 1px solid #0B0903;
+        @include mmd {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(134 225 245 / 97%);
+            padding: 24px 16px;
+            transform: translateY(100%);
+            @include transition;
+            &.show-menu {
+                transform: translate(0, 0);
+            }
+        }
+        & .title {
+            margin-bottom: 32px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        & .heading-actions {
+            @include mmd {
+                margin-top: 32px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            @include sm {
+                margin-top: 26px;
+            }
+        }
+    }
+    &-link {
+        @include font-22;
+        color: $paragraph;
+        display: block;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        @include lg {
+            padding: 10px 12px;
+        }
+        @include mmd {
+            font-weight: 600;
+            line-height: 160%;
+            background: transparent;
+            box-shadow: none;
+        }
+        &:hover,
+        &.active {
+            color: $white;
+            background: #0B0903;
+        }
+    }
+    &-actions {
+        grid-gap: 12px;
+        @include sm {
+            grid-gap: 8px;
+        }
+    }
+  
+    &-toggler {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: $heading;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & svg {
+            --width: 40px;
+            width: var(--width);
+            height: var(--width);
+            @include sm {
+                --width: 32px;
+            }
+        }
+    }
+    .logo{
+        img {
+            max-width: 223px;
+            @include sm{
+            max-width: 180px; 
+            }
+        }
+    }
+    .socials {
+        margin-top: 0px;
+        @include sm{
+            a{
+                font-size: 23px;
+                height: 45px;
+                width: 45px;
+            }
+        }
+    }
+}

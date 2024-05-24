@@ -1,0 +1,86 @@
+.about{
+    position: relative;
+    z-index: 1;
+    padding-top: 330px;
+    padding-bottom: 320px;
+    @include lg{
+        padding-top: 250px;
+        padding-bottom: 240px;
+    }
+    @include mmd{
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    @include sm{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .aboutTopShap img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    .aboutBg img{
+        position: absolute;
+        top: 7%;
+        left: 0;
+        width: 100%;
+        height: 86%;
+        z-index: -2;
+        @include lg{
+            top: 5%;
+            height: 90%;
+        }
+        @include md{
+            top: 3%;
+            height: 94%;
+        }
+        @include sm{
+            top: 0;
+            height: 100%;
+        }
+    }
+    .aboutBottomShap img{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    &-content{
+        max-width: 630px;
+        padding: 60px 46px 71px 69px;
+        border-radius: 56px;
+        border: 7px dashed #000;
+        background: #FFF;
+        @include mmd{
+            padding: 40px 30px;
+            border-radius: 20px;
+
+        }
+        h3{
+            color: #FFD331;
+            text-shadow: 5.474px 5.474px 0px #0B0903;
+            -webkit-text-stroke-width: 1.4492497444152832px;
+            -webkit-text-stroke-color: #0B0903;;
+            font-weight: 700;
+            line-height: 110%;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            @include sm{
+                margin-bottom: 15px;
+            }
+        }
+        p{
+            color: #1D1B1B;
+            @include font-26;
+            font-weight: 300;
+            line-height: 160%;
+            strong{
+                font-weight: 700;
+            }
+        }
+    }
+}

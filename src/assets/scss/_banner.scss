@@ -24,8 +24,16 @@
             margin-bottom: 25px;
         }
         p{
-            @include font-20;
+            @include font-28;
             margin-bottom: 38px;
+            max-width: 340px;
+            line-height: normal;
+        }
+        .socials{
+            border-radius: 11.689px;
+            border: 1.461px solid #0B0903;
+            padding: 10px;
+            gap: 10px;
         }
     }
 }

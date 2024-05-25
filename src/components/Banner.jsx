@@ -1,6 +1,7 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import heroBg from '../assets/img/heroBG.jpg'
+import socialIcon3 from '../assets/img/socialIcon3.svg'
 import { FaPaperPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import CopyToClipboard from './CopyToClipboard';
@@ -13,6 +14,10 @@ export default function Banner(){
         {
           icon:<FaPaperPlane />,
           url: "https://t.me/pegeonsol",
+        },
+        {
+          icon:socialIcon3,
+          url: "https://www.google.com",
         },
       ];
     return(

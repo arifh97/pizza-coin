@@ -30,9 +30,10 @@
             @include mmd{
                 transform: rotate(0deg);
                 padding-block: 50px;
+                border-radius: 70px;
             }
             @include sm{
-                border-radius: 50px;
+                border-radius: 30px;
             }
             &::before{
                 position: absolute;
@@ -45,7 +46,7 @@
                 border: 3px dashed #1C1A1A;
                 z-index: -1;
                 @include sm{
-                    border-radius: 40px;
+                    border-radius: 25px;
                 }
             }
             .title{
@@ -84,7 +85,7 @@
                     padding-left: 80px;
                 }
                 @include sm{
-                    padding-left: 40px;
+                    padding-left: 30px;
                     padding-right: 30px;
                 }
                 li{
@@ -157,8 +158,9 @@
                     bottom: 0 !important;
                     transform: translateY(25%);
                     @include mmd{
-                        left: 10px;
-                        transform: translateY(-50%);
+                        left: -100px;
+                        transform: translateY(20%);
+                        max-width: 210px;
                     }
                     @include sm{
                        display: none;               
@@ -168,6 +170,9 @@
                     z-index: 2;
                     left: -20px;
                     transform: translateY(10%);
+                    @include mmd{
+                        left: -20px;
+                    }
                 }
                 .fireGif{
                     position: absolute;
@@ -177,6 +182,7 @@
                     z-index: 1;
                     @include mmd{
                         max-width: 30px;
+                        left:0px;
                     }
                 }
             }
@@ -203,7 +209,7 @@
             .roadmaplist{
                 padding-left: 130px;
                 @include mmd{
-                    padding-left: 40px;
+                    padding-left: 30px;
                 }
             }
         }

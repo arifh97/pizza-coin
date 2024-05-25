@@ -2,7 +2,7 @@ import { React } from 'react'
 import Header from './components/Header'
 import Banner from './components/Banner'
 import About from './components/About'
-// import Services from './components/Services'
+import Tokenomics from './components/Tokenomics'
 // import Footer from './components/Footer'
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
       <Header />
       <Banner />
       <About />
-      {/* <Services />
-      <Footer /> */}
+      <Tokenomics />
+      {/* <Footer /> */}
     </>
   )
 }

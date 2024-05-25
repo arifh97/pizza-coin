@@ -1,45 +1,15 @@
 .marquee {
-    border-left: none;
-    border-right: none;
-    width: 110%;
-    left: -5%;
     position: relative;
-    z-index: 99;
     overflow-x: hidden;
-    .rfm-initial-child-container {
-        gap: 70px;
-        overflow: hidden;
-    }
-    .container{
-        max-width: 1500px;
-        position: relative;
-        z-index: 1;
-        &::before{
-            @include potion_left;
-            content: "";
-            width: 194px;
-            height: 100%;
-            background: linear-gradient(270deg, rgba(9, 9, 37, 0) 0%, #090925 100%);
-            z-index: 2;
-        }
-        &::after{
-            @include potion_right;
-            content: "";
-            width: 194px;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(9, 9, 37, 0) 0%, #090925 100%);
-            z-index: 2;
-        }
-    }
+}
+.marquee.top {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.rfm-child {
-    figure {
-        img {
-            max-width: 250px;
-            @include sm{
-                max-width: 180px;
-            }
-        }
-    }
+.marquee.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

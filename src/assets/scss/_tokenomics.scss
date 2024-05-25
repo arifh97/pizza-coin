@@ -19,6 +19,7 @@
         height: 100%;
         z-index: -1;
     }
+    
     &-content{
         max-width: 950px;
         border-radius: 56px;
@@ -76,10 +77,11 @@
                     }
                     img{
                         position: absolute;
-                        right: 10px;
+                        right: 20px;
                         top: 50%;
                         transform: translateY(-50%);
                         max-width: 80px;
+                        height: 80px;
                     }
                 }
                 .pizzaItemBG{
@@ -92,5 +94,24 @@
                 }
             }
         }
+    }   
+}
+.coffee {
+    max-width: 350px;
+    position: absolute;
+    right: 6%;
+    bottom: 20%;
+    @include xl{
+        right: 1%;
+    }
+    @include lg{
+        right: 1%;
+        bottom: 17%;
+    }
+    @include mmd{
+        max-width: 250px;
+        right: 1%;
+        bottom: 14.5%;
+        z-index: -1;
     }
 }

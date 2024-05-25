@@ -145,16 +145,39 @@
             @include sm{
                 padding-left: 0px;
             }
-            .roadmapItemImg img{
-                left: -40px; 
-                right: auto;
-                transform: translateY(-30%);
-                @include mmd{
-                    left: 10px;
-                    transform: translateY(-50%);
+            .roadmapItemImg{
+                max-width: 270px;
+                position: relative;
+                .roadmapPizzaPhase2BG{
+                    position: absolute;
+                    max-width: 250px;
+                    top: auto;
+                    left: -40px; 
+                    right: auto;
+                    bottom: 0 !important;
+                    transform: translateY(25%);
+                    @include mmd{
+                        left: 10px;
+                        transform: translateY(-50%);
+                    }
+                    @include sm{
+                       display: none;               
+                    }
                 }
-                @include sm{
-                   display: none;               
+                .roadmapPizzaPhase2{
+                    z-index: 2;
+                    left: -20px;
+                    transform: translateY(10%);
+                }
+                .fireGif{
+                    position: absolute;
+                    max-width: 50px;
+                    left:65px;
+                    transform: translateY(-60px);
+                    z-index: 1;
+                    @include mmd{
+                        max-width: 30px;
+                    }
                 }
             }
             .title{

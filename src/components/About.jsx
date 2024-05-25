@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import aboutBg from '../assets/img/aboutBg.jpg'
 import aboutTopShap from '../assets/img/aboutTopShap.png'
 import aboutBottomShap from '../assets/img/aboutBottomShap.png'
+import coffe from '../assets/img/coffe.gif'
 import MarqueeTop from './MarqueeTop'
 import MarqueeBottom from './MarqueeBottom'
 export default function About(){
@@ -24,6 +25,7 @@ export default function About(){
                         </div>
                     </Col>
                 </Row>
+                <img className='coffee' src={coffe} alt="" />
             </Container>
             <figure className='aboutBottomShap'>
                 <img src={aboutBottomShap} alt="" />

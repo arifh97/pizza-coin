@@ -2,9 +2,9 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import tokenomicsBG from '../assets/img/tokenomicsBG.png'
 import tokensiImg1 from '../assets/img/tokensiImg1.png'
-import tokensiImg2 from '../assets/img/tokensiImg2.png'
-import tokensiImg3 from '../assets/img/tokensiImg3.png'
-import tokensiImg4 from '../assets/img/tokensiImg4.png'
+import tokensiImg2 from '../assets/img/tokensiImg2.gif'
+import tokensiImg3 from '../assets/img/tokensiImg3.gif'
+import tokensiImg4 from '../assets/img/tokensiImg4.gif'
 import tokenPizzaSlize from '../assets/img/pizzaSingle-Item-BG.png'
 export default function Tokenomics() {
     const tokenItems =[

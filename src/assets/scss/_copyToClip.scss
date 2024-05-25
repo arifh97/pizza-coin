@@ -5,6 +5,7 @@
     background: #FEFEB5;
     box-shadow: 1.999px 3.997px 0px 0px #0E0E00;
     padding: 20px 16.622px 20px 22.378px;
+    padding-bottom: 18px;
     color: $black;
     font-family: $font_FormulaCondensedLight;
     font-size: 25px;
@@ -13,6 +14,7 @@
     line-height: 120%;
     letter-spacing: 2px;
     max-width: 567px;
+    overflow: hidden;
     @include mmd{
         margin-inline:auto
     }
@@ -23,8 +25,14 @@
         font-size: 18px;
     }
     p{
+        max-width: 90%;
+        font-size: 25px;
+        text-align: start;
+        z-index: -1;
+        margin-left: 0;
+        overflow: hidden;
+        margin-left: 0;
         margin-bottom: 0;
-        padding-right: 30px;
     }
     button{
         position: absolute;

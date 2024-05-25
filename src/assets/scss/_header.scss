@@ -1,13 +1,11 @@
-@keyframes headerAnimation {
-    0% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
+
 
 .heading {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
     border-bottom: 2px solid #010000;
     background: $white;
     padding: var(--bs-navbar-padding-y) 0;
@@ -21,16 +19,16 @@
         width: 100%;
         top: 0;
         animation: headerAnimation .5s linear;
-        --bs-navbar-padding-y: 15px;
+        --bs-navbar-padding-y: 10px;
         @include mmd {
-            --bs-navbar-padding-y: 20px;
+            --bs-navbar-padding-y: 10px;
         }
         @include sm {
-            --bs-navbar-padding-y: 12px;
+            --bs-navbar-padding-y: 8px;
         }
     }
     &-menu {
-        max-width: 360px;
+        width: max-content;
         padding: 4px;
         border-radius: 8px;
         border: 1px solid #0B0903;
@@ -71,8 +69,8 @@
         @include font-22;
         color: $paragraph;
         display: block;
-        padding: 18px 12px;
-        padding-bottom: 13px;
+        padding: 10px 16px;
+        padding-bottom: 6px;
         border-radius: 4px;
         cursor: pointer;
         @include lg {
@@ -137,7 +135,8 @@
         }
     }
     .boxed-btn{
-        padding: 8px 24px;
+        padding: 10px 24px;
         font-size: 20px;
+        padding-bottom: 7px;
     }
 }

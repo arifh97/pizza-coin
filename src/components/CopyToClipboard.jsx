@@ -23,7 +23,7 @@ export default function CopyToClipboard() {
     <div className="copytoclipboard-inner mt-3 pt-2">
         <h4>CONTRACT ADDRESS </h4>
       <div className="copytoclipboard">
-        <p style={{ overflowWrap: 'break-word' }}>
+        <p className='d-flex'>
           <strong>CA:</strong> {textToCopy}
         </p>
         <button onClick={handleCopyToClipboard}>

@@ -4,6 +4,9 @@ import roadmaptitleBg from '../assets/img/roadmaptitleBg.png'
 import roadmapItemImg1 from '../assets/img/roadmapItemImg1.png'
 import roadmapItemImg2 from '../assets/img/roadmapItemImg2.png'
 import roadmapItemImg3 from '../assets/img/roadmapItemImg3.png'
+import roadmapPizzaPhase2 from '../assets/img/roadmapPizzaPhase2.png'
+import roadmapPizzaPhase2BG from '../assets/img/roadmapPizzaPhase2BG.png'
+import tokensiImg2 from '../assets/img/tokensiImg2.gif'
 import MarqueeTop from './MarqueeTop'
 
 export default function Roadmap() {
@@ -49,9 +52,11 @@ export default function Roadmap() {
                   <li>Establishing a vibrant community through social media and meme campaigns.</li>
                   <li>Listing on major exchanges for maximum accessibility.</li>
                 </ul>
-                <figure className='roadmapItemImg'>
-                  <img src={roadmapItemImg2} alt="" />
-                </figure>
+                <div className='roadmapItemImg'>
+                  <img className='fireGif' src={tokensiImg2} alt="" />
+                  <img  className='roadmapPizzaPhase2' src={roadmapPizzaPhase2} alt="" />
+                  <img className='roadmapPizzaPhase2BG' src={roadmapPizzaPhase2BG} alt="" />
+                </div>
               </div>
 
               <div className="wrapper-item">

@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import About from './components/About'
 import Tokenomics from './components/Tokenomics'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
       <Banner />
       <About />
       <Tokenomics />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

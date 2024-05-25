@@ -68,6 +68,7 @@
         color: $paragraph;
         display: block;
         padding: 8px 12px;
+        padding-bottom: 3px;
         border-radius: 4px;
         cursor: pointer;
         @include lg {

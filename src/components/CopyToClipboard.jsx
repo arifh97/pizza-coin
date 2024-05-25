@@ -34,7 +34,7 @@ export default function CopyToClipboard() {
           )}
           {isCopied && (
             <span className='copied'>
-              <LuCopyCheck /> <span className='copyedTxt'>Copied!</span>
+              <LuCopyCheck /> <span className='copyedTxt'></span>
             </span>
           )}
         </button>

@@ -1,0 +1,137 @@
+.roadmap{
+    position: relative;
+    z-index: 1;
+    padding-top: 170px;
+    padding-bottom: 100px;
+    background-color: #FFC446;
+    .container{
+        max-width: 1170px;
+        margin-inline: auto;
+    }
+    .section-title{
+        margin-bottom: 120px;
+    }
+    &-wrapper{
+        .wrapper-item{
+            position: relative;
+            z-index: 1;
+            border-radius: 168px;
+            background: #FEE974;
+            box-shadow: 0px -8px 0px 0px #FFC446;
+            padding-top: 74px;
+            padding-bottom: 74px;
+            transform: rotate(-6.062deg);
+            @include mmd{
+                transform: rotate(0deg);
+
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                left: 10px;
+                top: 10px;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                border-radius: 168px;
+                border: 3px dashed #1C1A1A;
+                z-index: -1;
+            }
+            .title{
+                position: absolute;
+                z-index: 2;
+                padding:32px 62px;
+                padding-bottom: 25px;
+                top: -50px;
+                left: 90px;
+                h4{
+                    padding: 0;
+                    margin: 0;
+                    color: #1C1A1A;
+                    text-align: center;
+                    @include font-44;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    display: inline-block;
+                }
+                .roadmaptitleBg img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+            }
+            .roadmaplist{
+                padding-left: 220px;
+                @include mmd{
+                    padding-left: 80px;
+                }
+                li{
+                    color: #000;
+                    font-family: $font_FormulaCondensedLight;
+                    @include font-24;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 20px;
+                    padding-left: 40px;
+                    &:before{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 0;
+                        width: 23px;
+                        height: 23px;
+                        background-image: url('../img/roadmapListImg.png');
+                        background-size: contain;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                    }
+                }
+                li:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .roadmapItemImg img{
+                position: absolute;
+                right: 0; 
+                top: 50%;
+                max-width: 270px;
+                transform: translateY(-50%);
+            }
+
+        }
+        .wrapper-item:nth-child(2){
+            transform: rotate(4deg);
+            margin-top: 20px;
+            @include mmd{
+                padding-left: 150px;
+                transform: rotate(0deg);
+            }
+            .roadmapItemImg img{
+                left: -60px; 
+                right: auto;
+            }
+            .title{
+                left: auto;
+                right: 30px; 
+                transform: rotate(4deg);
+            }
+        }
+        
+        .wrapper-item:nth-child(3){
+            margin-top: 50px;
+            .roadmaplist{
+                padding-left: 130px;
+                @include mmd{
+                    padding-left: 80px;
+                }
+            }
+        }
+        
+    }
+}

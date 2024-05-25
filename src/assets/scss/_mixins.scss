@@ -152,6 +152,17 @@
     }
 }
 
+@mixin font-44 {
+    font-size: 44px;
+    line-height: normal;
+    @include md {
+        font-size: 35px;
+    }
+    @include sm {
+        font-size: 30px;
+    }
+}
+
 @mixin font-42 {
     font-size: 42px;
     line-height: 110%;

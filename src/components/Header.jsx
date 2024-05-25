@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Link, animateScroll as scroll} from 'react-scroll';
 import { FaPaperPlane } from "react-icons/fa";
@@ -12,8 +12,19 @@ export default function Header() {
     setIsMenu(!isMenu);
   };
   
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScroll = window.scrollY > 200;
+      setScrolled(isScroll);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [scrolled, setScrolled]);
 
-
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -30,14 +41,16 @@ export default function Header() {
       url: "https://t.me/pegeonsol",
     },
   ];
+  const buyPizzaBtn = "Buy Pizza";
+  const buyPizzaBtnUrl = "https://google.com"
   return (
     <>
-      <header className='heading'>
+      <header className={`heading ${scrolled ? 'position-fixed' : ''}`}>
         <Container className='d-flex align-items-center justify-content-between header-wrapper'>
           <nav className={`heading-menu ${isMenu ?'show-menu':''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
               <Link className="logo" href="/"  onClick={scrollToTop}>
-               <img src={logo} alt='logo' /> PEGE
+               <img src={logo} alt='logo' />
               </Link>
               <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,21 +60,32 @@ export default function Header() {
               </button>
             </div>
             <ul className="main_menu d-lg-flex align-items-center">
-              <Link to="/" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >HOME</Link>
+              <Link to="banner" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >HOME</Link>
               <Link to="about" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >ABOUT</Link>
-              <Link to="pizzanomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >PIZZAnomics</Link>
+              <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >PIZZAnomics</Link>
               <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >Roadmap</Link>
             </ul>
+              <div className="forResponsive  d-lg-none">
+                
+                <ul className="socials d-flex align-items-center flex-wrap gap-3">
+                    {socials.map((item, index)=>(
+                    <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
+                    ))}
+                    <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
+                </ul>
+              </div>
           </nav>
           <Link className="logo" href="/"  onClick={scrollToTop}>
            <img src={logo} alt='logo' />
           </Link>
-          <ul className="socials d-flex align-items-center flex-wrap gap-3">
-              {socials.map((item, index)=>(
-               <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
-              ))}
-              <a href="#" className='boxed-btn'>Buy Pizza</a>
-          </ul>
+          <div className='d-none d-lg-block'>
+            <ul className="socials d-flex align-items-center flex-wrap gap-3">
+                {socials.map((item, index)=>(
+                <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
+                ))}
+                <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
+            </ul>
+          </div>
           <div className="heading-actions d-flex align-items-center flex-wrap d-lg-none">
             <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
               <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

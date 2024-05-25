@@ -4,6 +4,7 @@ import Banner from './components/Banner'
 import About from './components/About'
 import Tokenomics from './components/Tokenomics'
 import Footer from './components/Footer'
+import Roadmap from './components/Roadmap'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <About />
       <Tokenomics />
+      <Roadmap />
       <Footer />
     </>
   )

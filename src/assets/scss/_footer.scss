@@ -3,13 +3,14 @@
     padding-top: 650px;
     padding-bottom: 130px;
     z-index: 1;
-    background-image: url(../img/footerBG.png);
+    background-image: url(../img/footerBG.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+    background-position: bottom center;
+    background-size: 100% 100%;
     @include mmd{
         padding-top: 400px;
         padding-bottom: 80px;
+        background-size: cover;
     }
     .footer-logo img{
         max-width: 150px;

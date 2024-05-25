@@ -28,7 +28,17 @@ h1{
     -webkit-text-stroke-color: #0B0903;
     letter-spacing: 4.944px;
     text-transform: uppercase;
-    @include sm{
+    @include xl{
+        text-shadow: 4px 4px 0px #0B0903;
+        -webkit-text-stroke-width: 1px;
+
+    }
+    @include lg{
+        text-shadow: 4px 4px 0px #0B0903;
+        -webkit-text-stroke-width: 1px;
+
+    }
+    @include mmd{
         text-shadow: 3px 3px 0px #0B0903;
         -webkit-text-stroke-width: 1px;
 
@@ -44,10 +54,17 @@ h2{
     -webkit-text-stroke-width: 2.7799999713897705px;
     -webkit-text-stroke-color: #1A1A1A;
     text-transform: uppercase;
-    @include sm{
+    @include xl{
+        text-shadow: 4px 4px 0px #0B0903;
+        -webkit-text-stroke-width: 1px;
+    }
+    @include lg{
         text-shadow: 3px 3px 0px #0B0903;
         -webkit-text-stroke-width: 1px;
-
+    }
+    @include mmd{
+        text-shadow: 3px 3px 0px #0B0903;
+        -webkit-text-stroke-width: 1px;
     }
 }
 h3{
@@ -155,6 +172,9 @@ input::-webkit-inner-spin-button {
             border: 0.877px solid #770017;
             background: #FFF;
             box-shadow: 2.384px 2.384px 0px 0px #000;
+            img{
+                max-width: 24px;
+            }
         }
         &:hover a{
             background: $accent;

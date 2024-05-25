@@ -2,14 +2,21 @@
     position: relative;
     z-index: 1;
     padding-top: 170px;
-    padding-bottom: 100px;
+    padding-bottom: 180px;
     background-color: #FFC446;
+    @include mmd{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
     .container{
         max-width: 1170px;
         margin-inline: auto;
     }
     .section-title{
         margin-bottom: 120px;
+        @include mmd{
+            margin-bottom: 60px;
+        }
     }
     &-wrapper{
         .wrapper-item{
@@ -18,12 +25,14 @@
             border-radius: 168px;
             background: #FEE974;
             box-shadow: 0px -8px 0px 0px #FFC446;
-            padding-top: 74px;
-            padding-bottom: 74px;
+            padding-block: 74px;
             transform: rotate(-6.062deg);
             @include mmd{
                 transform: rotate(0deg);
-
+                padding-block: 50px;
+            }
+            @include sm{
+                border-radius: 50px;
             }
             &::before{
                 position: absolute;
@@ -35,6 +44,9 @@
                 border-radius: 168px;
                 border: 3px dashed #1C1A1A;
                 z-index: -1;
+                @include sm{
+                    border-radius: 40px;
+                }
             }
             .title{
                 position: absolute;
@@ -43,6 +55,9 @@
                 padding-bottom: 25px;
                 top: -50px;
                 left: 90px;
+                @include sm{
+                    left: 30px;
+                }
                 h4{
                     padding: 0;
                     margin: 0;
@@ -68,6 +83,10 @@
                 @include mmd{
                     padding-left: 80px;
                 }
+                @include sm{
+                    padding-left: 40px;
+                    padding-right: 30px;
+                }
                 li{
                     color: #000;
                     font-family: $font_FormulaCondensedLight;
@@ -79,6 +98,9 @@
                     z-index: 1;
                     margin-bottom: 20px;
                     padding-left: 40px;
+                    @include sm{
+                        padding-left: 30px;
+                    }
                     &:before{
                         position: absolute;
                         content: "";
@@ -98,10 +120,17 @@
             }
             .roadmapItemImg img{
                 position: absolute;
-                right: 0; 
+                right: -30px; 
                 top: 50%;
                 max-width: 270px;
                 transform: translateY(-50%);
+                @include mmd{
+                    right: 0px; 
+                    max-width: 150px;
+                }
+                @include sm{
+                   display: none;               
+                }
             }
 
         }
@@ -109,12 +138,24 @@
             transform: rotate(4deg);
             margin-top: 20px;
             @include mmd{
-                padding-left: 150px;
+                margin-top: 50px;
+                padding-left: 100px;
                 transform: rotate(0deg);
             }
+            @include sm{
+                padding-left: 0px;
+            }
             .roadmapItemImg img{
-                left: -60px; 
+                left: -40px; 
                 right: auto;
+                transform: translateY(-30%);
+                @include mmd{
+                    left: 10px;
+                    transform: translateY(-50%);
+                }
+                @include sm{
+                   display: none;               
+                }
             }
             .title{
                 left: auto;
@@ -125,10 +166,21 @@
         
         .wrapper-item:nth-child(3){
             margin-top: 50px;
+            .roadmapItemImg img{
+                right: -50px; 
+                transform: translateY(-30%);
+                @include mmd{
+                    right: 0px;    
+                    transform: translateY(-50%);                 
+                }
+                @include sm{
+                   display: none;               
+                }
+            }
             .roadmaplist{
                 padding-left: 130px;
                 @include mmd{
-                    padding-left: 80px;
+                    padding-left: 40px;
                 }
             }
         }

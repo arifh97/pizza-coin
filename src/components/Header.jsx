@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef  } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Link, animateScroll as scroll} from 'react-scroll';
 import { FaPaperPlane } from "react-icons/fa";
@@ -15,7 +15,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      const isScroll = window.scrollY > 200;
+      const isScroll = window.scrollY > 100;
       setScrolled(isScroll);
     };
     window.addEventListener('scroll', handleScroll);
@@ -65,7 +65,7 @@ export default function Header() {
               <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >PIZZAnomics</Link>
               <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >Roadmap</Link>
             </ul>
-              <div className="forResponsive  d-lg-none">
+              <div className="forResponsive  d-lg-none mt-4">
                 
                 <ul className="socials d-flex align-items-center flex-wrap gap-3">
                     {socials.map((item, index)=>(

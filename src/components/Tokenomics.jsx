@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import tokenomicsBG from '../assets/img/tokenomicsBG.png'
+import tokensiImg11 from '../assets/img/tokensiImg11.gif'
 import tokensiImg1 from '../assets/img/tokensiImg1.png'
 import tokensiImg2 from '../assets/img/tokensiImg2.gif'
 import tokensiImg3 from '../assets/img/tokensiImg3.gif'
@@ -12,6 +13,7 @@ export default function Tokenomics() {
             title: "Liquidity",
             value: "85%",
             contentRImg: tokensiImg1,
+            tokensiImg: tokensiImg11,
         },
         {
             title: "Liquidity Burned",
@@ -51,6 +53,9 @@ export default function Tokenomics() {
                                     <img src={item.contentRImg} alt="" />
                                 </div>
                                 <img className='pizzaItemBG' src={tokenPizzaSlize} alt="" />
+                                {item.tokensiImg?(<img className='tokensiImg' src={item.tokensiImg} alt="" />):''}
+                                
+                                
                             </div>
                         ))}
                     </div>

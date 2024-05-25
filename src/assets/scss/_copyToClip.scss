@@ -6,7 +6,6 @@
     box-shadow: 1.999px 3.997px 0px 0px #0E0E00;
     padding: 20px 16.622px 20px 22.378px;
     padding-bottom: 18px;
-    color: $black;
     font-family: $font_FormulaCondensedLight;
     font-size: 25px;
     font-style: normal;
@@ -24,6 +23,7 @@
     @include sm{
         font-size: 18px;
     }
+  
     p{
         max-width: 90%;
         font-size: 25px;
@@ -43,6 +43,19 @@
         background: transparent;
         padding: 0;   
         font-size: 28px;
+    }
+}
+.copytoclipboard-inner{
+    h4{
+        color: $white;
+        text-shadow: 2px 2px 0px #0B0903;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #0B0903;
+        @include font-26;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%; /* 28.6px */
+        text-transform: uppercase;
     }
 
 }

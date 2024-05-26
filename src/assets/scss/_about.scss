@@ -1,94 +1,95 @@
-.about{
+.about {
     position: relative;
     z-index: 1;
     padding-top: 380px;
     padding-bottom: 366px;
-    @include lg{
+    @include lg {
         padding-top: 250px;
         padding-bottom: 240px;
     }
-    @include mmd{
+    @include mmd {
         padding-top: 150px;
         padding-bottom: 150px;
     }
-    @include sm{
+    @include sm {
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    .aboutTopShap img{
+    .aboutTopShap img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         z-index: -1;
     }
-    .aboutBg img{
+    .aboutBg img {
         position: absolute;
         top: 7%;
         left: 0;
         width: 100%;
         height: 86%;
         z-index: -2;
-        @include lg{
+        @include lg {
             top: 5%;
             height: 90%;
         }
-        @include md{
+        @include md {
             top: 3%;
             height: 94%;
         }
-        @include sm{
+        @include sm {
             top: 0;
             height: 100%;
         }
     }
-    .aboutBottomShap img{
+    .aboutBottomShap img {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         z-index: -1;
     }
-    &-content{
+    &-content {
         max-width: 630px;
         padding: 60px 46px 71px 69px;
         border-radius: 56px;
         border: 7px dashed #000;
         background: #FFF;
-        @include mmd{
+        @include mmd {
             padding: 40px 30px;
             border-radius: 20px;
-
+            margin: auto;
         }
-        h3{
+        h3 {
             color: #FFD331;
             text-shadow: 5.474px 5.474px 0px #0B0903;
             -webkit-text-stroke-width: 1.4492497444152832px;
-            -webkit-text-stroke-color: #0B0903;;
+            -webkit-text-stroke-color: #0B0903;
+            ;
             font-weight: 700;
             line-height: 110%;
             text-transform: uppercase;
             margin-bottom: 20px;
-            @include xl{
+            @include xl {
                 text-shadow: 4px 4px 0px #0B0903;
                 -webkit-text-stroke-width: 1.4492497444152832px;
             }
-            @include lg{
+            @include lg {
                 text-shadow: 4px 4px 0px #0B0903;
                 -webkit-text-stroke-width: 1.4492497444152832px;
             }
-            @include mmd{
+            @include mmd {
                 margin-bottom: 10px;
                 text-shadow: 3px 3px 0px #0B0903;
                 -webkit-text-stroke-width: 1.4492497444152832px;
             }
         }
-        p{
+        p {
             color: #1D1B1B;
             @include font-26;
             font-weight: 300;
             line-height: 160%;
-            strong{
+            strong {
                 font-weight: 700;
             }
         }

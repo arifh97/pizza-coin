@@ -25,6 +25,26 @@ export default function Header() {
   }, [scrolled, setScrolled]);
 
 
+  useEffect(() => {
+    window.gtranslateSettings = {
+      default_language: "en",
+      languages: ["en", "tr", "ru", "ko"],
+      wrapper_selector: ".gtranslate_wrapper",
+      switcher_horizontal_position: "right",
+      flag_style: "3d",
+    };
+    const script = document.createElement("script");
+    script.src = "https://cdn.gtranslate.net/widgets/latest/dwf.js";
+    script.async = true;
+    script.defer = true;
+    const landingHeader = document.querySelector("#LandingHeader");
+    if (landingHeader) {
+      landingHeader.appendChild(script);
+    }
+  }, []);
+
+
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -45,7 +65,7 @@ export default function Header() {
   const buyPizzaBtnUrl = "https://google.com"
   return (
     <>
-      <header className={`heading ${scrolled ? 'position-fixed' : ''}`}>
+      <header className={`heading ${scrolled ? 'position-fixed' : ''}`}  id="LandingHeader">
         <Container className='d-flex align-items-center justify-content-between header-wrapper'>
           <nav className={`heading-menu ${isMenu ? 'show-menu' : ''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
@@ -95,6 +115,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
+          <div className="gtranslate_wrapper  gtranslate_wrapper_modile"></div>
         </Container>
       </header>
     </>

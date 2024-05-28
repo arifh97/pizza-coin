@@ -183,3 +183,29 @@ input::-webkit-inner-spin-button {
 
     }
 }
+
+
+
+#container > canvas {
+    pointer-events: none !important;
+  }
+  #container > canvas + div {
+    display: none !important;
+  }
+  .gt_container--hich1m .gt_switcher .gt_selected a {
+    background: linear-gradient(
+      78.65deg,
+      rgba(25, 249, 195, 0.95) 8.37%,
+      #29d93b 86.44%
+    );
+    color: #000 !important;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .gt_container--hich1m .gt_switcher .gt_selected a:hover {
+    background: linear-gradient(
+      78.65deg,
+      rgba(25, 249, 195, 0.95) 8.37%,
+      #29d93b 86.44%
+    ) !important;
+  }

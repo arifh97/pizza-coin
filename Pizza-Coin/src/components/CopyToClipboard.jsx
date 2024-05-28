@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { LuCopy, LuCopyCheck } from "react-icons/lu";
 
 export default function CopyToClipboard() {
-  const [textToCopy, setTextToCopy] = useState(' Buj59cjUKa211uZodeTRe9uWJUs814YSYaDgjNQ1PRGt');
+  const [textToCopy, setTextToCopy] = useState('Buj59cjUKa211uZodeTRe9uWJUs814YSYaDgjNQ1PRGt');
   const [isCopied, setIsCopied] = useState(false);
-
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(textToCopy)
       .then(() => {

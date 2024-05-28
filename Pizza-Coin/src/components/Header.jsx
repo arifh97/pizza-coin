@@ -1,17 +1,26 @@
-import React, { useEffect, useState, useRef  } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
-import { Link, animateScroll as scroll} from 'react-scroll';
-import { FaPaperPlane } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { Link, animateScroll as scroll } from 'react-scroll';
+import twitter from '../assets/img/twitter.svg'
+import telegram from '../assets/img/telegram.svg'
 
 import logo from '../assets/img/logo.png'
 export default function Header() {
   const [isMenu, setIsMenu] = useState(false);
-  const handleTouchStart  = (event) => {
+  const handleTouchStart = (event) => {
     navigate(event);
     setIsMenu(!isMenu);
   };
-  
+  // State to hold the system language
+  const [language, setLanguage] = useState('');
+
+  // Use useEffect to get the language when the component mounts
+  useEffect(() => {
+    const systemLanguage = navigator.language || navigator.userLanguage;
+    setLanguage(systemLanguage);
+  }, [language, setLanguage]);
+console.log(language);
+
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +33,27 @@ export default function Header() {
     }
   }, [scrolled, setScrolled]);
 
-  
+
+  useEffect(() => {
+    window.gtranslateSettings = {
+      default_language: language == 'zh-CN' ? 'zh-CN' : 'en',
+      languages: ["en", "zh-CN","tr", "ru", "ko"],
+      wrapper_selector: ".gtranslate_wrapper",
+      switcher_horizontal_position: "right",
+      flag_style: "3d",
+    };
+    const script = document.createElement("script");
+    script.src = "https://cdn.gtranslate.net/widgets/latest/dwf.js";
+    script.async = true;
+    script.defer = true;
+    const landingHeader = document.querySelector("#LandingHeader");
+    if (landingHeader) {
+      landingHeader.appendChild(script);
+    }
+  }, []);
+
+
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -33,24 +62,24 @@ export default function Header() {
   };
   const socials = [
     {
-      icon:<FaXTwitter />,
-      url: "https://x.com/pegeonsol",
+      icon:<img src={twitter} alt="Social Icon" />,
+      url: "https://x.com/pizpepe",
     },
     {
-      icon:<FaPaperPlane />,
-      url: "https://t.me/pegeonsol",
+      icon:<img src={telegram} alt="Social Icon" />,
+      url: "https://t.me/+-uqniTrsSvc5ODZh",
     },
   ];
   const buyPizzaBtn = "Buy Pizza";
   const buyPizzaBtnUrl = "https://google.com"
   return (
     <>
-      <header className={`heading ${scrolled ? 'position-fixed' : ''}`}>
+      <header className={`heading ${scrolled ? 'position-fixed' : ''}`}  id="LandingHeader">
         <Container className='d-flex align-items-center justify-content-between header-wrapper'>
-          <nav className={`heading-menu ${isMenu ?'show-menu':''}`}>
+          <nav className={`heading-menu ${isMenu ? 'show-menu' : ''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
-              <Link className="logo" href="/"  onClick={scrollToTop}>
-               <img src={logo} alt='logo' />
+              <Link className="logo" to="banner" onClick={scrollToTop}>
+                <img src={logo} alt='logo' />
               </Link>
               <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,30 +89,30 @@ export default function Header() {
               </button>
             </div>
             <ul className="main_menu d-lg-flex align-items-center">
-              <Link to="banner" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >HOME</Link>
-              <Link to="about" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >ABOUT</Link>
-              <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >PIZZAnomics</Link>
-              <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={170} >Roadmap</Link>
+              <Link to="banner" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >HOME</Link>
+              <Link to="about" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >ABOUT</Link>
+              <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Pizzerianomics</Link>
+              <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Pizzeriamap</Link>
             </ul>
-              <div className="forResponsive  d-lg-none mt-4">
-                
-                <ul className="socials d-flex align-items-center flex-wrap gap-3">
-                    {socials.map((item, index)=>(
-                    <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
-                    ))}
-                    <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
-                </ul>
-              </div>
+            <div className="forResponsive  d-lg-none mt-4">
+
+              <ul className="socials d-flex align-items-center flex-wrap gap-3">
+                {socials.map((item, index) => (
+                  <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
+                ))}
+                <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
+              </ul>
+            </div>
           </nav>
-          <Link className="logo" href="/"  onClick={scrollToTop}>
-           <img src={logo} alt='logo' />
+          <Link className="logo" href="/" onClick={scrollToTop}>
+            <img src={logo} alt='logo' />
           </Link>
           <div className='d-none d-lg-block'>
             <ul className="socials d-flex align-items-center flex-wrap gap-3">
-                {socials.map((item, index)=>(
+              {socials.map((item, index) => (
                 <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
-                ))}
-                <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
+              ))}
+              <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
             </ul>
           </div>
           <div className="heading-actions d-flex align-items-center flex-wrap d-lg-none">

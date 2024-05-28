@@ -35,7 +35,7 @@ export default function Banner(){
                     <Col lg={8} md={10}>
                         <div className="banner-content text-center text-lg-start">
                             <h1> <span>Pepe</span> Pizzeria</h1>
-                            <p>Join us and become a part of Pepe Restaurante.</p>
+                            <p>Join us and become part of the First Pepe Pizzeria</p>
                             <div className='d-flex justify-content-center justify-content-lg-start align-items-center flex-wrap gap-4'>
                                 <ul className="socials d-flex align-items-center">
                                     {socials.map((item, index)=>(

@@ -22,7 +22,10 @@ $_1C1A1A: #1C1A1A;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
-$font_Fredoka: "Fredoka", sans-serif;
+$font_Fredoka: "Fredoka",
+sans-serif;
 $font_FormulaCondensedLight: 'FormulaCondensedLight';
 $font_FormulaCondensedBold:'FormulaCondensedBold';
+:root {
+    scroll-behavior: auto !important;
+}

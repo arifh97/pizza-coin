@@ -222,6 +222,20 @@
     }
 }
 
+@mixin font-25 {
+    font-size: 25px;
+    line-height: 160%;
+    @include lg {
+        font-size: 22px;
+    }
+    @include md {
+        font-size: 20px;
+    }
+    @include sm {
+        font-size: 18px;
+    }
+}
+
 @mixin font-24 {
     font-size: 24px;
     line-height: 160%;

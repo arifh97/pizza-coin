@@ -1,21 +1,21 @@
 import { React } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import FooterLogo from '../assets/img/footer-logo.png'
-import socialIcon3 from '../assets/img/socialIcon3.svg'
-import socialIcon4 from '../assets/img/socialIcon4.svg'
+import FooterLogo from '../assets/img/Pizza.png'
 import MarqueeBottom from './MarqueeBottom';
 import MarqueeTop from './MarqueeTop';
-import { FaPaperPlane } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import twitter from '../assets/img/twitter.svg'
+import telegram from '../assets/img/telegram.svg'
+import socialIcon3 from '../assets/img/socialIcon3.svg'
+import socialIcon4 from '../assets/img/socialIcon4.svg'
 export default function Footer(){
     const socials = [
         {
-            icon:<FaXTwitter />,
-            url: "https://x.com/pegeonsol",
+            icon:<img src={twitter} alt="Social Icon" />,
+            url: "https://x.com/pizpepe",
           },
           {
-            icon:<FaPaperPlane />,
-            url: "https://t.me/pegeonsol",
+            icon:<img src={telegram} alt="Social Icon" />,
+            url: "https://t.me/+-uqniTrsSvc5ODZh",
           },
           {
             icon:<img src={socialIcon3} alt="Social Icon" />,
@@ -47,6 +47,8 @@ export default function Footer(){
                                     </ul>
                                 </div>
                                 <p className='copyright'>Copyright: © {currentYear} Pizzeria. All Rights Reserved.</p>
+                                
+                                <div className="gtranslate_wrapper  gtranslate_wrapper_modile"></div>
                             </div>
                         </Col>
                     </Row>

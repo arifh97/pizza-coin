@@ -1,0 +1,95 @@
+.footer{
+    position: relative;
+    padding-top: 650px;
+    padding-bottom: 130px;
+    z-index: 1;
+    background-image: url(../img/footerBG.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 100%;
+    @include mmd{
+        padding-top: 400px;
+        padding-bottom: 80px;
+        background-size: cover;
+    }
+    .footer-logo img{
+        max-width: 150px;
+        margin-bottom: 45px;
+        @include mmd{
+            max-width: 110px;
+            margin-bottom: 25px;
+        }
+    }
+    &-content{
+        max-width: 1024px;
+        margin-inline: auto;
+        border-radius: 56px;
+        border: 7px dashed #121212;
+        background: #FFEA73;
+        padding: 31.599px 10%;
+        @include xl{
+            margin-inline: 10%;
+        }
+        @include lg{
+            margin-inline: 10%;
+        }
+        @include md{
+            margin-inline: 10%;
+        }
+        @include sm{
+            border-radius: 20px;
+            border: 4px dashed #121212;
+            padding: 30px 5%;
+
+        }
+        h3{
+            color: $white;
+            text-shadow: 1px 1px 0px #110015;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #110015;
+            @include font-80;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 100%;
+        }
+        .social-logos{
+            h4{
+                color: #FEF8F8;
+                text-align: center;
+                text-shadow: -1.506px 1.506px 0px #FAA500;
+                -webkit-text-stroke-width: 1.5055843591690063px;
+                -webkit-text-stroke-color: #16161B;
+                @include font-24;
+                font-weight: 700;
+                line-height: 110%;
+                letter-spacing: 1.92px;
+                text-transform: uppercase;
+            }
+            .socials{
+                border-radius: 11.689px;
+                border: 1.461px solid #121212;
+                padding: 11.689px;
+                display: inline-block;        
+                img{
+                    max-width: 24px;
+                    width: 24px;
+                    height: 24px;
+                }
+                a:hover{
+                    color: $black;
+                    background: transparent;
+                    border: 1.461px solid $red;
+                    box-shadow: 2.384px 2.384px 0px 0px $red;
+                }
+            }
+        }
+    }
+    .copyright{
+        color: $black;
+        font-family: $font_Fredoka;
+        @include font-22;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 33px */
+    }
+}

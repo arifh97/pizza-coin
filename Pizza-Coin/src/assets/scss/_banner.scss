@@ -1,30 +1,31 @@
-.banner {
+.banner{
     position: relative;
     z-index: 3;
     padding-top: 190px;
     padding-bottom: 65px;
-    @include mmd {
+    @include mmd{
         padding-top: 150px;
         padding-bottom: 60px;
     }
-    &::before {
-        @include sm {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #C8B258, $alpha: 0.3);
-            z-index: 1;
-        }
-    }
-    &::after {
+    &::before{
+       @include sm{
         position: absolute;
         content: "";
-        right: 6.5%;
-        top: 20.8%;
-        width: 40%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #C8B258, $alpha: 0.3);
+        z-index: 1;
+       }
+        
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        right: 8.5%;
+        top: 20%;
+        width: 47%;
         height: 100px;
         background-image: url('../img/animated-christmas-light-gif-4.gif');
         background-position: top right;
@@ -32,48 +33,41 @@
         background-size: contain;
         transform: rotate(4deg);
         z-index: -1;
-        @include xl {
-            top: 19.8%;
-            height: 80px;
-        }
-        @include lg {
-            height: 70px;
-        }
-        @include sm {
+        @include sm{
             display: none;
         }
     }
-    .heroBg img {
+    .heroBg img{
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
-        @include sm {
+        @include sm{
             object-fit: cover;
         }
     }
-    &-content {
+    &-content{
         position: relative;
         z-index: 9;
-        h1 {
+        h1{
             margin-bottom: 25px;
         }
-        p {
+        p{
             @include font-28;
             margin-bottom: 38px;
             max-width: 340px;
             line-height: normal;
-            @include mmd {
+            @include mmd{
                 margin-inline: auto;
             }
         }
-        a.boxed-btn.transparent {
+        a.boxed-btn.transparent{
             background: transparent;
             color: $white;
             text-shadow: 2px 2px 0px #0B0903;
-            box-shadow: none;
+            box-shadow:  none;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: #0B0903;
             font-family: $font_FormulaCondensedBold;
@@ -83,17 +77,17 @@
             text-transform: uppercase;
             padding-bottom: 12px;
         }
-        .socials {
+        .socials{
             border-radius: 11.689px;
             border: 1.461px solid #0B0903;
             padding: 13px;
-            gap: 10px;
-            img {
+            gap: 10px;            
+            img{
                 max-width: 24px;
                 width: 24px;
                 height: 24px;
             }
-            a:hover {
+            a:hover{
                 color: $black;
                 background: transparent;
                 border: 1.461px solid $red;
@@ -102,3 +96,4 @@
         }
     }
 }
+

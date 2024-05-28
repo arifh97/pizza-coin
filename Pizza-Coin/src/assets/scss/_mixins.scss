@@ -1,0 +1,287 @@
+@mixin transition {
+    transition: all .3s ease-in-out;
+}
+
+@mixin hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@mixin show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@mixin img($property) {
+    width: 100%;
+    height: 100%;
+    object-fit: $property;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin postion_middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin postion_shap_middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@mixin middle_clear {
+    position: unset;
+    top: 0%;
+    left: 0%;
+    transform: translate(0, 0);
+}
+
+@mixin potion_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin potion_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@mixin font-247{
+    font-size: 247px;
+    line-height: 100%;
+    @include xxl {
+        font-size: 150px;
+    }
+    @include xl {
+        font-size: 120px;
+    }
+    @include lg {
+        font-size: 100px;
+    }
+    @include md {
+        font-size: 80px;
+    }
+    @include sm {
+        font-size: 65px;
+    }
+}
+
+@mixin font-204{
+    font-size: 204px;
+    line-height: 150%;
+    @include xxl {
+        font-size: 150px;
+    }
+    @include xl {
+        font-size: 120px;
+    }
+    @include lg {
+        font-size: 100px;
+    }
+    @include md {
+        font-size: 80px;
+    }
+    @include sm {
+        font-size: 65px;
+    }
+}
+
+@mixin font-115 {
+    font-size: 115px;
+    line-height: 110%;
+    @include xl {
+        font-size: 90px;
+    }
+    @include lg {
+        font-size: 75px;
+    }
+    @include mmd {
+        font-size: 50px;
+    }
+}
+
+
+@mixin font-80 {
+    font-size: 80px;
+    line-height: 150%;
+    @include xl {
+        font-size: 65px;
+    }
+    @include lg {
+        font-size: 50px;
+    }
+    @include mmd {
+        font-size: 35px;
+    }
+}
+
+@mixin font-56 {
+    font-size: 56px;
+    line-height: 110%;
+    @include xl {
+        font-size: 90px;
+    }
+    @include lg {
+        font-size: 75px;
+    }
+    @include mmd {
+        font-size: 50px;
+    }
+}
+
+@mixin font-48 {
+    font-size: 48px;
+    line-height: normal;
+    @include md {
+        font-size: 35px;
+    }
+    @include sm {
+        font-size: 30px;
+    }
+}
+
+@mixin font-44 {
+    font-size: 44px;
+    line-height: normal;
+    @include md {
+        font-size: 35px;
+    }
+    @include sm {
+        font-size: 30px;
+    }
+}
+
+@mixin font-42 {
+    font-size: 42px;
+    line-height: 110%;
+    @include md {
+        font-size: 35px;
+    }
+    @include sm {
+        font-size: 30px;
+    }
+}
+
+@mixin font-40 {
+    font-size: 40px;
+    line-height: 110%;
+    @include md {
+        font-size: 35px;
+    }
+    @include sm {
+        font-size: 30px;
+    }
+}
+
+@mixin font-28 {
+    font-size: 28px;
+    line-height: 160%;
+    @include md {
+        font-size: 24px;
+    }
+    @include sm {
+        font-size: 20px;
+    }
+}
+
+
+@mixin font-27 {
+    font-size: 27px;
+    line-height: 160%;
+    @include md {
+        font-size: 24px;
+    }
+    @include sm {
+        font-size: 20px;
+    }
+}
+
+@mixin font-26 {
+    font-size: 26px;
+    line-height: 160%;
+    @include lg {
+        font-size: 24px;
+    }
+    @include md {
+        font-size: 22px;
+    }
+    @include sm {
+        font-size: 20px;
+    }
+}
+
+@mixin font-24 {
+    font-size: 24px;
+    line-height: 160%;
+    @include lg {
+        font-size: 22px;
+    }
+    @include md {
+        font-size: 20px;
+    }
+    @include sm {
+        font-size: 18px;
+    }
+}
+
+@mixin font-22 {
+    font-size: 22px;
+    line-height: 160%;
+    @include lg {
+        font-size: 18px;
+    }
+    @include md {
+        font-size: 18px;
+    }
+    @include sm {
+        font-size: 16px;
+    }
+}
+
+@mixin font-20 {
+    font-size: 22px;
+    line-height: 160%;
+    @include lg {
+        font-size: 18px;
+    }
+    @include md {
+        font-size: 18px;
+    }
+    @include sm {
+        font-size: 16px;
+    }
+}
+
+@mixin font-18 {
+    font-size: 18px;
+    line-height: 160%;
+    @include mmd {
+        font-size: 16px;
+    }
+}
+
+@mixin font-16 {
+    font-size: 16px;
+    line-height: 160%;
+    @include sm {
+        font-size: 15px;
+    }
+}
+
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}

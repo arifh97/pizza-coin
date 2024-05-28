@@ -1,0 +1,124 @@
+.tokenomics{
+    position: relative;
+    z-index: 1;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    @include mmd{
+        padding-top: 60px;
+        padding-bottom: 110px;
+    }
+    @include ssm{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .tokenomicsBG img{
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    &-content{
+        max-width: 950px;
+        border-radius: 56px;
+        border: 7px dashed #121212;
+        background: #FFEA73;
+        margin-inline: auto;
+        padding: 50px 80px;
+        @include mmd{
+            padding: 60px 30px;
+            border-radius: 20px;
+            border: 4px dashed #121212;
+        }
+        h4{
+            font-family:$font_FormulaCondensedLight;
+            @include font-56;
+            color: $_1C1A1A;
+            font-weight: 300;
+            margin-bottom: 45px;
+            strong{
+                font-family: $font_FormulaCondensedBold;
+               font-weight: 700; 
+            }
+        }
+        & .content-inner{
+            gap: 50px;
+            @include mmd{
+                gap: 20px;
+            }
+            .inner-item{
+                position: relative; 
+                z-index: 1;
+                width: 50%;
+                max-width: 361px;
+                padding-top: 20px;
+                padding-bottom: 125px;
+                @include md{
+                    max-width: 324px;
+                }
+                @include sm{
+                    width: 100%;
+                }
+                .info{
+                    position: relative;
+                    h5{
+                        font-family: $font_FormulaCondensedLight;
+                        @include font-27;
+                        color: $_1C1A1A;
+                        font-weight: 300;
+                        span{
+                            font-family: $font_FormulaCondensedBold;
+                            @include font-42;
+                            font-weight: 700;
+                            color: $_1C1A1A;
+                        }
+                    }
+                    img{
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        max-width: 80px;
+                        height: 80px;
+                    }
+                }
+                .pizzaItemBG{
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }   
+}
+.coffee {
+    max-width: 370px;
+    position: absolute;
+    right: 6%;
+    bottom: 20%;
+    @include xl{
+        right: 1%;
+    }
+    @include lg{
+        right: 1%;
+        bottom: 17%;
+    }
+    @include mmd{
+        max-width: 250px;
+        right: 1%;
+        bottom: 14.5%;
+        z-index: -1;
+    }
+}
+
+img.tokensiImg {
+    position: absolute;
+    top: 22px;
+    max-width: 90px;
+    right: 20px;
+}

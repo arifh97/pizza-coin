@@ -7,12 +7,11 @@
     padding: 20px 16.622px 20px 22.378px;
     padding-bottom: 18px;
     font-family: $font_FormulaCondensedLight;
-    font-size: 25px;
     font-style: normal;
     font-weight: 300;
     line-height: 120%;
     letter-spacing: 2px;
-    max-width: 567px;
+    max-width: 620px;
     overflow: hidden;
     @include mmd{
         margin-inline:auto
@@ -27,7 +26,7 @@
   
     p{
         max-width: 93%;
-        @include font-24;
+        @include font-25;
         text-align: start;
         z-index: -1;
         margin-left: 0;

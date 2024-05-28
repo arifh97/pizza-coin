@@ -1,20 +1,20 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import heroBg from '../assets/img/heroBG.jpg'
+import twitter from '../assets/img/twitter.svg'
+import telegram from '../assets/img/telegram.svg'
 import socialIcon3 from '../assets/img/socialIcon3.svg'
 import socialIcon4 from '../assets/img/socialIcon4.svg'
-import { FaPaperPlane } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import CopyToClipboard from './CopyToClipboard';
 export default function Banner(){
     const socials = [
         {
-          icon:<FaXTwitter />,
-          url: "https://x.com/pegeonsol",
+          icon:<img src={twitter} alt="Social Icon" />,
+          url: "https://x.com/pizpepe",
         },
         {
-          icon:<FaPaperPlane />,
-          url: "https://t.me/pegeonsol",
+          icon:<img src={telegram} alt="Social Icon" />,
+          url: "https://t.me/+-uqniTrsSvc5ODZh",
         },
         {
           icon:<img src={socialIcon3} alt="Social Icon" />,

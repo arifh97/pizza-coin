@@ -1,34 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { LuCopy, LuCopyCheck } from "react-icons/lu";
 
 export default function CopyToClipboard() {
   const [textToCopy, setTextToCopy] = useState('Buj59cjUKa211uZodeTRe9uWJUs814YSYaDgjNQ1PRGt');
   const [isCopied, setIsCopied] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  // Update isMobile state on window resize
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  // Shortened version of the token based on screen size
-  const shortenedText = isMobile
-    ? `${textToCopy.substring(0, 10)}…${textToCopy.substring(textToCopy.length - 18)}`
-    : `${textToCopy.substring(0, 10)}…${textToCopy.substring(textToCopy.length - 30)}`;
-
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(textToCopy)
       .then(() => {
         setIsCopied(true);
-        // Reset the copied state after 1 second
+        // Reset the copied state after 30 seconds
         setTimeout(() => {
           setIsCopied(false);
         }, 1000);
@@ -40,10 +20,10 @@ export default function CopyToClipboard() {
 
   return (
     <div className="copytoclipboard-inner mt-3 pt-2">
-      <h4>CONTRACT ADDRESS</h4>
+        <h4>CONTRACT ADDRESS </h4>
       <div className="copytoclipboard">
         <p className='d-flex'>
-          <strong>CA:</strong> {shortenedText}
+          <strong>CA:</strong> {textToCopy}
         </p>
         <button onClick={handleCopyToClipboard}>
           {!isCopied && (

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import { FaPaperPlane } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import twitter from '../assets/img/twitter.svg'
+import telegram from '../assets/img/telegram.svg'
 
 import logo from '../assets/img/logo.png'
 export default function Header() {
@@ -11,6 +11,15 @@ export default function Header() {
     navigate(event);
     setIsMenu(!isMenu);
   };
+  // State to hold the system language
+  const [language, setLanguage] = useState('');
+
+  // Use useEffect to get the language when the component mounts
+  useEffect(() => {
+    const systemLanguage = navigator.language || navigator.userLanguage;
+    setLanguage(systemLanguage);
+  }, [language, setLanguage]);
+console.log(language);
 
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -27,8 +36,8 @@ export default function Header() {
 
   useEffect(() => {
     window.gtranslateSettings = {
-      default_language: "en",
-      languages: ["en", "tr", "ru", "ko"],
+      default_language: language == 'zh-CN' ? 'zh-CN' : 'en',
+      languages: ["en", "zh-CN","tr", "ru", "ko"],
       wrapper_selector: ".gtranslate_wrapper",
       switcher_horizontal_position: "right",
       flag_style: "3d",
@@ -53,12 +62,12 @@ export default function Header() {
   };
   const socials = [
     {
-      icon: <FaXTwitter />,
-      url: "https://x.com/pegeonsol",
+      icon:<img src={twitter} alt="Social Icon" />,
+      url: "https://x.com/pizpepe",
     },
     {
-      icon: <FaPaperPlane />,
-      url: "https://t.me/pegeonsol",
+      icon:<img src={telegram} alt="Social Icon" />,
+      url: "https://t.me/+-uqniTrsSvc5ODZh",
     },
   ];
   const buyPizzaBtn = "Buy Pizza";
@@ -82,8 +91,8 @@ export default function Header() {
             <ul className="main_menu d-lg-flex align-items-center">
               <Link to="banner" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >HOME</Link>
               <Link to="about" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >ABOUT</Link>
-              <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >PIZZAnomics</Link>
-              <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Roadmap</Link>
+              <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Pizzerianomics</Link>
+              <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Pizzeriamap</Link>
             </ul>
             <div className="forResponsive  d-lg-none mt-4">
 
@@ -115,7 +124,6 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div className="gtranslate_wrapper  gtranslate_wrapper_modile"></div>
         </Container>
       </header>
     </>

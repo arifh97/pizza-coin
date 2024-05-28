@@ -42,7 +42,7 @@ export default function Banner(){
                                     <li  key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
                                     ))}
                                 </ul>
-                                <a href="#" className="boxed-btn transparent">Ticker : $pizpep </a>
+                                <a href="#" className="boxed-btn transparent">Ticker : $PIZPEPE</a>
                             </div>
                             <CopyToClipboard />
                         </div>

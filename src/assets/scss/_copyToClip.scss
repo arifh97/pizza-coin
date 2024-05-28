@@ -19,14 +19,15 @@
     }
     strong{
         font-weight: 700;
+        font-family: $font_FormulaCondensedBold;
     }
     @include sm{
         font-size: 18px;
     }
   
     p{
-        max-width: 90%;
-        font-size: 25px;
+        max-width: 93%;
+        @include font-24;
         text-align: start;
         z-index: -1;
         margin-left: 0;

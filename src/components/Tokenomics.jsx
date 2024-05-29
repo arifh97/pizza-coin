@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import tokenomicsBG from '../assets/img/tokenomicsBG.png'
+import tokenomicsBG from '../assets/img/tokenomicsBG.jpg'
 import tokensiImg11 from '../assets/img/tokensiImg11.gif'
 import tokensiImg1 from '../assets/img/tokensiImg1.png'
 import tokensiImg2 from '../assets/img/tokensiImg2.gif'

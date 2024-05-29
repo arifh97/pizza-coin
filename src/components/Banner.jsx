@@ -28,6 +28,7 @@ export default function Banner(){
     return(
         <div className="banner">
             <figure className='heroBg'>
+                <img src="" alt="" />
                 <img src={heroBg} alt="" />
             </figure>
             <Container>

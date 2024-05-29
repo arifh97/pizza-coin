@@ -4,8 +4,14 @@
     padding-top: 190px;
     padding-bottom: 65px;
     @include mmd {
-        padding-top: 150px;
-        padding-bottom: 60px;
+        padding-top: 180px;
+        padding-bottom: 80px;
+    }
+    @include ssm{
+        background-image: url('../img/Mobilehomeback.jpg');
+        background-size: 100% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
     &::before {
         @include sm {
@@ -42,6 +48,13 @@
         @include sm {
             display: none;
         }
+        @include ssm {
+            right: -1%;
+            top: 17%;
+            width: 102%;
+            display: block;
+            background-repeat: repeat;
+        }
     }
     .heroBg img {
         position: absolute;
@@ -52,6 +65,11 @@
         z-index: -1;
         @include sm {
             object-fit: cover;
+            left: auto;
+            right: 0;
+        }
+        @include ssm {
+            display: none;
         }
     }
     &-content {
@@ -67,6 +85,9 @@
             line-height: normal;
             @include mmd {
                 margin-inline: auto;
+            }
+            @include sm{
+                font-size: 25px;
             }
         }
         a.boxed-btn.transparent {

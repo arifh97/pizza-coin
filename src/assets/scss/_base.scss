@@ -176,6 +176,14 @@ input::-webkit-inner-spin-button {
                 max-width: 35px;
                 width: 35px;
                 height: 35px;
+                @include sm{
+                    width: 30px !important;
+                    height: 30px !important;
+                }
+            }
+            @include sm{
+                padding: 10px;
+                border-radius: 6px;
             }
         }
         &:hover a{
@@ -210,4 +218,16 @@ input::-webkit-inner-spin-button {
       rgba(25, 249, 195, 0.95) 8.37%,
       #29d93b 86.44%
     ) !important;
+  }
+  .gt_container--hich1m .gt_switcher .gt_selected a{
+    font-size: 14px !important;
+  }
+  .gt_container--hich1m .gt_switcher .gt_option a{
+    font-size: 14px !important;
+  }
+  .gt_container--hich1m .gt_switcher{
+    width: 230px !important;
+  }
+  .gt_container--hich1m .gt_switcher .gt_option, .gt_container--hich1m .gt_switcher .gt_selected a{
+    width: 100% !important;
   }

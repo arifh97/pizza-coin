@@ -71,7 +71,7 @@ console.log(language);
     },
   ];
   const buyPizzaBtn = "Buy Pizza";
-  const buyPizzaBtnUrl = "https://google.com"
+  const buyPizzaBtnUrl = "/"
   return (
     <>
       <header className={`heading ${scrolled ? 'position-fixed' : ''}`}  id="LandingHeader">

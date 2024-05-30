@@ -32,8 +32,6 @@ export default function Roadmap() {
                 </div>
                 <ul className='roadmaplist'>
                   <li>Official token launch and distribution to pizza lovers everywhere.</li>
-                  <li>Establishing a vibrant community through social media and meme campaigns.</li>
-                  <li>Listing on major exchanges for maximum accessibility.</li>
                 </ul>
                 <figure className='roadmapItemImg'>
                   <img src={roadmapItemImg1} alt="" />
@@ -48,9 +46,7 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
-                  <li>Official token launch and distribution to pizza lovers everywhere.</li>
                   <li>Establishing a vibrant community through social media and meme campaigns.</li>
-                  <li>Listing on major exchanges for maximum accessibility.</li>
                 </ul>
                 <div className='roadmapItemImg'>
                   <img className='fireGif' src={tokensiImg2} alt="" />
@@ -67,8 +63,6 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
-                  <li>Official token launch and distribution to pizza lovers everywhere.</li>
-                  <li>Establishing a vibrant community through social media and meme campaigns.</li>
                   <li>Listing on major exchanges for maximum accessibility.</li>
                 </ul>
                 <figure className='roadmapItemImg'>

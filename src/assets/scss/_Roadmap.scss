@@ -97,7 +97,7 @@
                     line-height: normal;
                     position: relative;
                     z-index: 1;
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
                     padding-left: 40px;
                     @include sm{
                         padding-left: 30px;
@@ -135,6 +135,12 @@
             }
 
         }
+        .wrapper-item:nth-child(1){            
+            padding-block: 80px;
+            .roadmaplist{
+                max-width: 70%;
+            }
+        }
         .wrapper-item:nth-child(2){
             transform: rotate(4deg);
             margin-top: 40px;
@@ -150,6 +156,7 @@
                 max-width: 270px;
                 position: relative;
                 transform: translateY(25px);
+               
                 .roadmapPizzaPhase2BG{
                     position: absolute;
                     max-width: 250px;

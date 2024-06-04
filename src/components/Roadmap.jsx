@@ -47,7 +47,7 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
-                  <li>Establishing a vibrant community through social media and meme campaigns.</li>
+                  <li>LAUNCH !  On raydium.io $PIZPEPE 05.06.2024 6:00 PM (Berlin) 12:00 PM (New York).</li>
                 </ul>
                 <div className='roadmapItemImg'>
                   <img className='fireGif' src={tokensiImg2} alt="" />

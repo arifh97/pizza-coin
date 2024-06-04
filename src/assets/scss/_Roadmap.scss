@@ -139,6 +139,9 @@
             padding-block: 80px;
             .roadmaplist{
                 max-width: 70%;
+                @include sm{
+                    max-width: 100%;
+                }
             }
         }
         .wrapper-item:nth-child(2){

@@ -3,7 +3,31 @@ import MarqueeTop from './MarqueeTop'
 import logo from '../assets/img/contact-logo.png'
 import bg from '../assets/img/contact-bg.png'
 
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+
 export default function Contact() {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_xu7picy', 'template_yu7gdbd', form.current, {
+                publicKey: 'yEj4uR_S3N6Y2WGKt',
+            })
+            .then(
+                () => {
+                    alert('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
     return (
         <div className="contact position-relative">
             <div className="contact-bg position-absolute start-0 bottom-0 w-100 z-n1"><img src={bg} className="w-100 h-auto" alt="" /></div>
@@ -16,7 +40,7 @@ export default function Contact() {
                         <div className="section-title text-center">
                             <h2>Contact us</h2>
                         </div>
-                        <form className="contact-wrap">
+                        <form ref={form} onSubmit={sendEmail} className="contact-wrap">
                             <div className="form-box mb-4">
                                 <label htmlFor="#" className="form-label mb-2">Name</label>
                                 <input type="text" className="form-control" name="name" placeholder="Jhon Doe" required />

@@ -19,7 +19,6 @@ export default function Header() {
     const systemLanguage = navigator.language || navigator.userLanguage;
     setLanguage(systemLanguage);
   }, [language, setLanguage]);
-console.log(language);
 
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -50,7 +49,7 @@ console.log(language);
     if (landingHeader) {
       landingHeader.appendChild(script);
     }
-  }, []);
+  }, [language]);
 
 
 
@@ -78,7 +77,7 @@ console.log(language);
         <Container className='d-flex align-items-center justify-content-between header-wrapper'>
           <nav className={`heading-menu ${isMenu ? 'show-menu' : ''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
-              <Link className="logo" to="banner" onClick={scrollToTop}>
+              <Link className="logo" to="banner" spy={true} smooth={true} offset={-150} duration={600} >
                 <img src={logo} alt='logo' />
               </Link>
               <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
@@ -104,7 +103,7 @@ console.log(language);
               </ul>
             </div>
           </nav>
-          <Link className="logo" href="/" onClick={scrollToTop}>
+          <Link className="logo" to="banner" spy={true} smooth={true} offset={-150} duration={600} >
             <img src={logo} alt='logo' />
           </Link>
           <div className='d-none d-lg-block'>

@@ -19,11 +19,11 @@ export default function Footer(){
           },
           {
             icon:<img src={socialIcon3} alt="Social Icon" />,
-            url: "https://raydium.io/swap/?inputCurrency=sol&outputCurrency=EiHvfN6HKvY6v6vjaoL1hpCAAxK5QMswDK7SRDM3u5kd&outputSymbol=RASTAMOU&fixed=in&inputMint=sol&outputMint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+            url: "https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY",
           },
           {
             icon:<img src={socialIcon4} alt="Social Icon" />,
-            url: "https://dexscreener.com/?__cf_chl_tk=6UxNBnayvW7qzQDE_iKEFbhF1nlxT5p8d_LpGuHs4Os-1716965713-0.0.1.1-1557",
+            url: "https://dexscreener.com/solana/h2ncmtgzebhgjvzcnuxmxpncdxt64qp3mxlygaztcl3j",
           },
         ];
       const currentYear = new Date().getFullYear(); 

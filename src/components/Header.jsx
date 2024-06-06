@@ -70,7 +70,7 @@ export default function Header() {
     },
   ];
   const buyPizzaBtn = "Buy Pizza";
-  const buyPizzaBtnUrl = "/"
+  const buyPizzaBtnUrl = "https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY"
   return (
     <>
       <header className={`heading ${scrolled ? 'position-fixed' : ''}`}  id="LandingHeader">

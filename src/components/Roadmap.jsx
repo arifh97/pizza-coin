@@ -31,8 +31,7 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
-                  <li>AirDrop of 500.000 $Pizpepe Until June 07.2024</li>
-                  <li>Official token launch June 08.2024 1:00pm ( Berlin Time ) and distribution to pizza lovers everywhere</li>
+                  <li>AirDrop of 500.000 $Pizpepe</li>
                 </ul>
                 <figure className='roadmapItemImg'>
                   <img src={roadmapItemImg1} alt="" />

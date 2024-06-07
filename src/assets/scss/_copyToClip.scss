@@ -35,7 +35,9 @@
         overflow: hidden;
         margin-left: 0;
         margin-bottom: 0;
-        word-break: break-all;
+        @include mmd {
+            word-break: break-all;
+        }
         & strong {
             white-space: nowrap;
         }

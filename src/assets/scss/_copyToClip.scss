@@ -1,4 +1,4 @@
-.copytoclipboard{
+.copytoclipboard {
     position: relative;
     border-radius: 19.987px;
     border: 0.999px solid #000;
@@ -13,21 +13,20 @@
     letter-spacing: 2px;
     max-width: 630px;
     overflow: hidden;
-    @include mmd{
-        margin-inline:auto
+    @include mmd {
+        margin-inline: auto
     }
-    strong{
+    strong {
         font-weight: 700;
         font-family: $font_FormulaCondensedBold;
     }
-    @include sm{
+    @include sm {
         font-size: 18px;
         border-radius: 8px;
         padding-left: 10px;
         padding-right: 18px;
     }
-  
-    p{
+    p {
         max-width: 93%;
         @include font-25;
         text-align: start;
@@ -36,23 +35,28 @@
         overflow: hidden;
         margin-left: 0;
         margin-bottom: 0;
+        word-break: break-all;
+        & strong {
+            white-space: nowrap;
+        }
     }
-    button{
+    button {
         position: absolute;
         top: 50%;
         right: 15px;
         transform: translateY(-50%);
         border: 0;
         background: transparent;
-        padding: 0;   
+        padding: 0;
         font-size: 28px;
-        @include sm{
+        @include sm {
             right: 10px;
         }
     }
 }
-.copytoclipboard-inner{
-    h4{
+
+.copytoclipboard-inner {
+    h4 {
         color: $white;
         text-shadow: 2px 2px 0px #0B0903;
         -webkit-text-stroke-width: 1px;
@@ -60,8 +64,8 @@
         font-size: 26px;
         font-style: normal;
         font-weight: 700;
-        line-height: 110%; /* 28.6px */
+        line-height: 110%;
+        /* 28.6px */
         text-transform: uppercase;
     }
-
 }

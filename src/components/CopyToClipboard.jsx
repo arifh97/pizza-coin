@@ -19,24 +19,29 @@ export default function CopyToClipboard() {
   };
 
   return (
-    <div className="copytoclipboard-inner mt-3 pt-2">
+    <div className="copytoclipboard-inner d-flex flex-wrap align-items-end gap-3 gap-lg-4">
+      <div className='me-1 me-lg-2'>
         <h4>CONTRACT ADDRESS </h4>
-      <div className="copytoclipboard">
-        <p className='d-flex'>
-          <strong>CA:</strong> {textToCopy}
-        </p>
-        <button onClick={handleCopyToClipboard}>
-          {!isCopied && (
-            <span>
-              <LuCopy />
-            </span>
-          )}
-          {isCopied && (
-            <span className='copied'>
-              <LuCopyCheck /> <span className='copyedTxt'></span>
-            </span>
-          )}
-        </button>
+        <div className="copytoclipboard">
+          <p className='d-flex'>
+            <strong>CA:</strong> {textToCopy}
+          </p>
+          <button onClick={handleCopyToClipboard}>
+            {!isCopied && (
+              <span>
+                <LuCopy />
+              </span>
+            )}
+            {isCopied && (
+              <span className='copied'>
+                <LuCopyCheck /> <span className='copyedTxt'></span>
+              </span>
+            )}
+          </button>
+        </div>
+      </div>
+      <div>
+        <a href="#" className="boxed-btn transparent">Ticker : $PIZPEPE</a>
       </div>
     </div>
   );

@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import twitter from '../assets/img/twitter.svg'
-import telegram from '../assets/img/telegram.svg'
 
 import logo from '../assets/img/logo.png'
+import Social from './Social';
 export default function Header() {
   const [isMenu, setIsMenu] = useState(false);
   const handleTouchStart = (event) => {
@@ -36,7 +35,7 @@ export default function Header() {
   useEffect(() => {
     window.gtranslateSettings = {
       default_language: language == 'zh-CN' ? 'zh-CN' : 'en',
-      languages: ["en", "zh-CN","tr", "ru", "ko"],
+      languages: ["en", "zh-CN", "tr", "ru", "ko"],
       wrapper_selector: ".gtranslate_wrapper",
       switcher_horizontal_position: "right",
       flag_style: "3d",
@@ -59,21 +58,11 @@ export default function Header() {
       behavior: 'smooth'
     });
   };
-  const socials = [
-    {
-      icon:<img src={twitter} alt="Social Icon" />,
-      url: "https://x.com/pizpepe",
-    },
-    {
-      icon:<img src={telegram} alt="Social Icon" />,
-      url: "https://t.me/+-uqniTrsSvc5ODZh",
-    },
-  ];
   const buyPizzaBtn = "Buy Pizza";
   const buyPizzaBtnUrl = "https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY"
   return (
     <>
-      <header className={`heading ${scrolled ? 'position-fixed' : ''}`}  id="LandingHeader">
+      <header className={`heading ${scrolled ? 'position-fixed' : ''}`} id="LandingHeader">
         <Container className='d-flex align-items-center justify-content-between header-wrapper'>
           <nav className={`heading-menu ${isMenu ? 'show-menu' : ''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
@@ -94,25 +83,14 @@ export default function Header() {
               <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Pizzeriamap</Link>
             </ul>
             <div className="forResponsive  d-lg-none mt-4">
-
-              <ul className="socials d-flex align-items-center flex-wrap gap-3">
-                {socials.map((item, index) => (
-                  <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
-                ))}
-                <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
-              </ul>
+              <Social />
             </div>
           </nav>
           <Link className="logo" to="banner" spy={true} smooth={true} offset={-150} duration={600} >
             <img src={logo} alt='logo' />
           </Link>
           <div className='d-none d-lg-block'>
-            <ul className="socials d-flex align-items-center flex-wrap gap-3">
-              {socials.map((item, index) => (
-                <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
-              ))}
-              <a href={buyPizzaBtnUrl} className='boxed-btn'>{buyPizzaBtn}</a>
-            </ul>
+            <Social />
           </div>
           <div className="heading-actions d-flex align-items-center flex-wrap d-lg-none">
             <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>

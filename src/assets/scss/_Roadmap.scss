@@ -1,25 +1,25 @@
-.roadmap{
+.roadmap {
     position: relative;
     z-index: 1;
     padding-top: 170px;
     padding-bottom: 180px;
     background-color: #FFC446;
-    @include mmd{
+    @include mmd {
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    .container{
+    .container {
         max-width: 1170px;
         margin-inline: auto;
     }
-    .section-title{
+    .section-title {
         margin-bottom: 120px;
-        @include mmd{
+        @include mmd {
             margin-bottom: 60px;
         }
     }
-    &-wrapper{
-        .wrapper-item{
+    &-wrapper {
+        .wrapper-item {
             position: relative;
             z-index: 1;
             border-radius: 168px;
@@ -27,15 +27,15 @@
             box-shadow: 0px -8px 0px 0px #FFC446;
             padding-block: 100px;
             transform: rotate(-6.062deg);
-            @include mmd{
+            @include mmd {
                 transform: rotate(0deg);
                 padding-block: 70px;
                 border-radius: 70px;
             }
-            @include sm{
+            @include sm {
                 border-radius: 30px;
             }
-            &::before{
+            &::before {
                 position: absolute;
                 content: "";
                 left: 10px;
@@ -45,21 +45,21 @@
                 border-radius: 168px;
                 border: 3px dashed #1C1A1A;
                 z-index: -1;
-                @include sm{
+                @include sm {
                     border-radius: 25px;
                 }
             }
-            .title{
+            .title {
                 position: absolute;
                 z-index: 2;
-                padding:32px 62px;
+                padding: 32px 62px;
                 padding-bottom: 25px;
                 top: -50px;
                 left: 90px;
-                @include sm{
+                @include sm {
                     left: 30px;
                 }
-                h4{
+                h4 {
                     padding: 0;
                     margin: 0;
                     color: #1C1A1A;
@@ -70,7 +70,7 @@
                     line-height: normal;
                     display: inline-block;
                 }
-                .roadmaptitleBg img{
+                .roadmaptitleBg img {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -79,16 +79,16 @@
                     z-index: -1;
                 }
             }
-            .roadmaplist{
+            .roadmaplist {
                 padding-left: 220px;
-                @include mmd{
+                @include mmd {
                     padding-left: 80px;
                 }
-                @include sm{
+                @include sm {
                     padding-left: 30px;
                     padding-right: 30px;
                 }
-                li{
+                li {
                     color: #000;
                     font-family: $font_FormulaCondensedLight;
                     @include font-24;
@@ -99,10 +99,10 @@
                     z-index: 1;
                     margin-bottom: 15px;
                     padding-left: 40px;
-                    @include sm{
+                    @include sm {
                         padding-left: 30px;
                     }
-                    &:before{
+                    &:before {
                         position: absolute;
                         content: "";
                         left: 0;
@@ -114,116 +114,116 @@
                         background-position: center center;
                         background-repeat: no-repeat;
                     }
+                    & a {
+                        color: #0047FF;
+                    }
                 }
-                li:last-child{
+                li:last-child {
                     margin-bottom: 0;
                 }
             }
-            .roadmapItemImg img{
+            .roadmapItemImg img {
                 position: absolute;
-                right: -30px; 
+                right: -30px;
                 top: 50%;
                 max-width: 270px;
                 transform: translateY(-50%);
-                @include mmd{
-                    right: 0px; 
+                @include mmd {
+                    right: 0px;
                     max-width: 150px;
                 }
-                @include sm{
-                   display: none;               
+                @include sm {
+                    display: none;
                 }
             }
-
         }
-        .wrapper-item:nth-child(1){            
+        .wrapper-item:nth-child(1) {
             padding-block: 80px;
-            .roadmaplist{
+            .roadmaplist {
                 max-width: 70%;
-                @include sm{
+                @include sm {
                     max-width: 100%;
                 }
             }
         }
-        .wrapper-item:nth-child(2){
+        .wrapper-item:nth-child(2) {
             transform: rotate(4deg);
             margin-top: 40px;
-            @include mmd{
+            @include mmd {
                 margin-top: 50px;
                 padding-left: 100px;
                 transform: rotate(0deg);
             }
-            @include sm{
+            @include sm {
                 padding-left: 0px;
             }
-            .roadmapItemImg{
+            .roadmapItemImg {
                 max-width: 270px;
                 position: relative;
                 transform: translateY(25px);
-               
-                .roadmapPizzaPhase2BG{
+                .roadmapPizzaPhase2BG {
                     position: absolute;
                     max-width: 250px;
                     top: auto;
-                    left: -40px; 
+                    left: -40px;
                     right: auto;
                     bottom: 0 !important;
                     transform: translateY(25%);
-                    @include mmd{
+                    @include mmd {
                         left: -100px;
                         transform: translateY(20%);
                         max-width: 210px;
                     }
-                    @include sm{
-                       display: none;               
+                    @include sm {
+                        display: none;
                     }
                 }
-                .roadmapPizzaPhase2{
+                .roadmapPizzaPhase2 {
                     z-index: 2;
                     left: -20px;
                     transform: translateY(10%);
-                    @include mmd{
+                    @include mmd {
                         left: -20px;
                     }
                 }
-                .fireGif{
+                .fireGif {
                     position: absolute;
                     max-width: 50px;
-                    left:65px;
+                    left: 65px;
                     transform: translateY(-60px);
                     z-index: 1;
-                    @include mmd{
+                    @include mmd {
                         max-width: 30px;
-                        left:0px;
+                        left: 0px;
                     }
                 }
             }
-            .title{
+            .title {
                 left: auto;
-                right: 30px; 
+                right: 30px;
                 transform: rotate(4deg);
             }
         }
-        
-        .wrapper-item:nth-child(3){
+        .wrapper-item:nth-child(3) {
             margin-top: 50px;
-            .roadmapItemImg img{
-                right: -50px; 
+            .roadmapItemImg img {
+                right: -50px;
                 transform: translateY(-30%);
-                @include mmd{
-                    right: 0px;    
-                    transform: translateY(-50%);                 
+                @include mmd {
+                    right: 0px;
+                    transform: translateY(-50%);
                 }
-                @include sm{
-                   display: none;               
+                @include sm {
+                    display: none;
                 }
             }
-            .roadmaplist{
+            .roadmaplist {
                 padding-left: 130px;
-                @include mmd{
+                padding-right: 31%;
+                @include mmd {
                     padding-left: 30px;
                 }
             }
         }
-        
     }
 }

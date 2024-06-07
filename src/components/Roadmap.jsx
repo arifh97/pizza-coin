@@ -32,7 +32,7 @@ export default function Roadmap() {
                 </div>
                 <ul className='roadmaplist'>
                   <li>AirDrop of 500.000 $PIZPEPE</li>
-                  <li>Official token launch June 05.2024 . <a className='me-1' href="https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY">Raydium</a> <a href="https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL">Jupiter</a></li>
+                  <li>Official token launch June 05.2024 . <a className='me-1' target='_blank' href="https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY">Raydium</a> <a target='_blank' href="https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL">Jupiter</a></li>
                 </ul>
                 <figure className='roadmapItemImg'>
                   <img src={roadmapItemImg1} alt="" />

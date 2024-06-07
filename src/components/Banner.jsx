@@ -9,7 +9,8 @@ import CopyToClipboard from './CopyToClipboard';
 import raydium from '../assets/img/raydium.png'
 import jup from '../assets/img/jup.png'
 import Social from './Social';
-
+import twitter from '../assets/img/twitter.svg'
+import telegram from '../assets/img/telegram.svg'
 
 export default function Banner(){
     const socials = [
@@ -30,6 +31,16 @@ export default function Banner(){
           url: "https://dexscreener.com/solana/h2ncmtgzebhgjvzcnuxmxpncdxt64qp3mxlygaztcl3j",
         },
       ];
+      const socialsbanner = [
+        {
+            icon: <img src={twitter} alt="Social Icon" />,
+            url: "https://x.com/pizpepe",
+        },
+        {
+            icon: <img src={telegram} alt="Social Icon" />,
+            url: "https://t.me/+-uqniTrsSvc5ODZh",
+        },
+    ];
     return(
         <div className="banner">
             <div className="banner-social position-absolute d-flex align-items-end justify-content-center"><Social /></div>
@@ -54,6 +65,13 @@ export default function Banner(){
                                     {socials.map((item, index)=>(
                                     <li  key={index}> <a href={item.url} target='_blank' className='d-flex align-items-center justify-content-center'>{item.icon}</a></li>
                                     ))}
+                                    <div className='responsiveSocial'>
+                                        <ul className="socials d-flex align-items-center flex-wrap gap-3">
+                                            {socialsbanner.map((item, index) => (
+                                                <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
+                                            ))}
+                                        </ul> 
+                                    </div>
                                 </ul>
                             </div>
                             <CopyToClipboard />

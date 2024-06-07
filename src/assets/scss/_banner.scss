@@ -8,6 +8,7 @@
         padding-bottom: 80px;
     }
     @include ssm {
+        padding-top: 120px;
         background-image: url('../img/Mobilehomeback.jpg');
         background-size: 100% 100%;
         background-position: center center;
@@ -125,6 +126,10 @@
             white-space: nowrap;
             @include font-30;
             color: $white;
+            @include sm{
+                padding: 10px 15px;
+                border-radius: 8px;
+            }
             &.bg-gradient {
                 background: linear-gradient(180deg, #4ECBC5 0%, #BE03FB 100%) !important;
             }
@@ -142,6 +147,12 @@
             font-weight: 700;
             text-transform: uppercase;
             padding-bottom: 12px;
+            @include sm{
+                min-width: 100%;
+                max-width: 100%;
+                width: 100%;
+                display: block;
+            }
         }
         .socials {
             border-radius: 11.689px;
@@ -161,6 +172,29 @@
                 border: 1.461px solid $red;
                 box-shadow: 2.384px 2.384px 0px 0px $red;
             }
+            .responsiveSocial{
+                display: none; 
+                @include mmd{
+                 display: block;
+                }
+                 .socials {
+                     border-radius: 11.689px;
+                     border: 0 !important;
+                     padding: 0 !important;
+                     gap: 10px ;
+                     a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                     }
+                 }
+             }
+        }
+    }
+
+    .banner-social{
+        @include mmd{
+            display: none !important;
         }
     }
 }
@@ -173,8 +207,9 @@
     @include lg {
         margin-top: 50px;
     }
-    @include md {
+    @include mmd {
         margin-top: 40px;
+        justify-content: center;
     }
     @include sm {
         margin-top: 30px;

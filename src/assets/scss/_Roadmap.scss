@@ -222,6 +222,10 @@
                 padding-right: 31%;
                 @include mmd {
                     padding-left: 30px;
+                    padding-right: 20%;
+                }
+                @include sm {
+                    padding-inline: 30px;
                 }
             }
         }

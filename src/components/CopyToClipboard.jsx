@@ -20,7 +20,7 @@ export default function CopyToClipboard() {
 
   return (
     <div className="copytoclipboard-inner d-flex flex-wrap align-items-end gap-3 gap-lg-4">
-      <div className='me-1 me-lg-2'>
+      <div className='me-1 me-lg-2 w-100 w-sm-auto'>
         <h4>CONTRACT ADDRESS </h4>
         <div className="copytoclipboard">
           <p className='d-flex'>
@@ -40,7 +40,7 @@ export default function CopyToClipboard() {
           </button>
         </div>
       </div>
-      <div>
+      <div className='w-100 w-sm-auto'>
         <a href="#" className="boxed-btn transparent">Ticker : $PIZPEPE</a>
       </div>
     </div>

@@ -129,6 +129,8 @@
             @include sm{
                 padding: 10px 15px;
                 border-radius: 8px;
+                width: 45%;
+                justify-content: center;
             }
             &.bg-gradient {
                 background: linear-gradient(180deg, #4ECBC5 0%, #BE03FB 100%) !important;

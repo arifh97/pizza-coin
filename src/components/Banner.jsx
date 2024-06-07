@@ -55,13 +55,16 @@ export default function Banner(){
                             <h1> <span>Pepe</span> Pizzeria</h1>
                             <p>Join us and become part of the First Pepe Pizzeria</p>
                             <div className='d-flex justify-content-center justify-content-lg-start align-items-center flex-wrap gap-4'>
-                                <a href="https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY" target='_blank' className="btn bg-gradient d-inline-flex align-items-center gap-2">
-                                    <img src={raydium} alt="" /> <span>Buy now</span>
-                                </a>
-                                <a href="https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL" target='_blank' className="btn d-inline-flex align-items-center gap-2">
-                                    <img src={jup} alt="" /> <span>Buy now</span>
-                                </a>
-                                <ul className="socials d-flex align-items-center p-0 border-0">
+                                <div className='d-flex justify-content-center justify-content-lg-start align-items-center flex-wrap gap-3 w-100 w-md-none'>
+                                    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY" target='_blank' className="btn bg-gradient d-inline-flex align-items-center gap-2">
+                                        <img src={raydium} alt="" /> <span>Buy now</span>
+                                    </a>
+                                    <a href="https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL" target='_blank' className="btn d-inline-flex align-items-center gap-2">
+                                        <img src={jup} alt="" /> <span>Buy now</span>
+                                    </a>
+                                </div>
+                                
+                                <ul className="socials d-flex align-items-center p-0 border-0 mb-5 mb-md-0">
                                     {socials.map((item, index)=>(
                                     <li  key={index}> <a href={item.url} target='_blank' className='d-flex align-items-center justify-content-center'>{item.icon}</a></li>
                                     ))}

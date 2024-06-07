@@ -135,6 +135,9 @@
             &.bg-gradient {
                 background: linear-gradient(180deg, #4ECBC5 0%, #BE03FB 100%) !important;
             }
+            img{
+                max-width: 40px;
+            }
         }
         a.boxed-btn.transparent {
             background: rgba(254, 254, 181, 0.30);

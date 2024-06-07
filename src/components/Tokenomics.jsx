@@ -44,7 +44,7 @@ export default function Tokenomics() {
         <Row>
             <Col>
                 <div className="tokenomics-content">
-                    <h4 className='text-center'>Total Supply <strong>100.000.000</strong></h4>
+                    <h4 className='text-center'>Total Supply <strong>1.000.000.000</strong></h4>
                     <div className="content-inner d-flex flex-wrap align-items-center justify-content-center">
                         {tokenItems.map((item, index)=>(
                             <div className={`inner-item item-${index + 1}`} key={index}>
@@ -53,8 +53,7 @@ export default function Tokenomics() {
                                     <img src={item.contentRImg} alt="" />
                                 </div>
                                 <img className='pizzaItemBG' src={tokenPizzaSlize} alt="" />
-                                {item.tokensiImg?(<img className='tokensiImg' src={item.tokensiImg} alt="" />):''}                               
-                                
+                                {item.tokensiImg?(<img className='tokensiImg' src={item.tokensiImg} alt="" />):''}
                             </div>
                         ))}
                     </div>

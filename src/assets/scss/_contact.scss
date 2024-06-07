@@ -1,0 +1,116 @@
+.contact {
+    padding-top: var(--pt, 170px);
+    padding-bottom: var(--pb, 215px);
+    background-color: #FFC446;
+    z-index: 0;
+    @include lg {
+        --pt: 150px;
+        --pb: 180px;
+        border-radius: 46px;
+        padding: 60px 52px;
+    }
+    @include md {
+        --pt: 120px;
+        --pb: 150px;
+    }
+    @include sm {
+        --pt: 80px;
+        --pb: 130px;
+    }
+    &-logo {
+        --width: 110px;
+        width: var(--width);
+        height: var(--width);
+        top: 8%;
+        @include md {
+            --width: 80px
+        }
+        @include sm {
+            --width: 60px;
+        }
+        &.large {
+            top: 15%;
+            --width: 200px;
+            @include md {
+                --width: 130px;
+            }
+            @include sm {
+                --width: 100px;
+            }
+        }
+    }
+    &-wrap {
+        margin-top: 20px;
+        border-radius: 56px;
+        padding: 80px 72px;
+        border: 7px dashed #121212;
+        background-color: #FFEA73;
+        @include lg {
+            padding: 60px;
+        }
+        @include md {
+            padding: 50px;
+            border-width: 5px;
+        }
+        @include sm {
+            padding: 24px;
+            border-width: 4px;
+            border-radius: 30px;
+        }
+        & .btn {
+            border-radius: 9px;
+            border: 1px solid #010000;
+            background-color: #FB0135;
+            box-shadow: 0px 4px 0px 0px #010000;
+            padding: 16px 24px;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: $white;
+            @include lg {
+                font-size: 24px;
+            }
+            @include md {
+                font-size: 20px;
+            }
+            @include sm {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.form {
+    &-box {
+        & textarea {
+            height: 200px;
+            padding: 24px;
+            @include mmd {
+                height: 160px
+            }
+        }
+    }
+    &-label {
+        @include font-28;
+        display: block;
+    }
+    &-control {
+        padding: 8px 24px;
+        height: 70px;
+        border-radius: 16px;
+        border: 1.5px solid #1C1A1A !important;
+        background-color: transparent;
+        @include font-24;
+        color: #1C1A1A;
+        &::placeholder {
+            color: #1C1A1A;
+        }
+        &:focus {
+            box-shadow: 3px 4px 0px 0px #000 !important;
+        }
+        @include mmd {
+            height: 60px;
+        }
+    }
+}

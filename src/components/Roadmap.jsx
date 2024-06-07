@@ -31,7 +31,12 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
+<<<<<<< HEAD
                   <li>AirDrop of 500.000 $Pizpepe</li>
+=======
+                  <li>AirDrop of 500.000 $PIZPEPE</li>
+                  <li>Official token launch June 05.2024 . <a className='me-1' target='_blank' href="https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY">Raydium</a> <a target='_blank' href="https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL">Jupiter</a></li>
+>>>>>>> 7b6ce1d8521b3792d110c76224c36d99596462ac
                 </ul>
                 <figure className='roadmapItemImg'>
                   <img src={roadmapItemImg1} alt="" />
@@ -46,7 +51,8 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
-                  <li>LAUNCH !  On raydium.io $PIZPEPE 05.06.2024 6:00 PM (Berlin) 12:00 PM (New York).</li>
+                  <li>Exciting Competitions and Loyalty Rewards for Our Community.</li>
+                  <li>Focus on community growth through influencer partnerships.</li>
                 </ul>
                 <div className='roadmapItemImg'>
                   <img className='fireGif' src={tokensiImg2} alt="" />
@@ -63,7 +69,7 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
-                  <li>Listing on major exchanges for maximum accessibility.</li>
+                  <li>Expanding our reach and ensuring accessibility to a global audience by securing listings on major cryptocurrency exchanges across the world, thus providing easy access to our platform for users from diverse regions and backgrounds.</li>
                 </ul>
                 <figure className='roadmapItemImg'>
                   <img src={roadmapItemImg3} alt="" />

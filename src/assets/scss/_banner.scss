@@ -7,11 +7,37 @@
         padding-top: 180px;
         padding-bottom: 80px;
     }
-    @include ssm{
+    @include ssm {
         background-image: url('../img/Mobilehomeback.jpg');
         background-size: 100% 100%;
         background-position: center center;
         background-repeat: no-repeat;
+    }
+    &-social {
+        width: 218px;
+        height: 140px;
+        background-image: url(/src/assets/img/social-bg.png);
+        background-size: 100% 100%;
+        background-position: center;
+        padding-bottom: 20px;
+        bottom: calc(7% + -2px);
+        right: 7%;
+        transform: rotate(3deg);
+        @include xxl {
+            bottom: 4%;
+        }
+        @include xl {
+            bottom: calc(5% - 4px);
+            transform: rotate(5deg);
+        }
+        @include lg {
+            bottom: calc(4% + 7px);
+            transform: rotate(9deg);
+        }
+        @include md {
+            bottom: calc(4% + 8px);
+            transform: rotate(13deg);
+        }
     }
     &::before {
         @include sm {
@@ -86,12 +112,25 @@
             @include mmd {
                 margin-inline: auto;
             }
-            @include sm{
+            @include sm {
                 font-size: 25px;
             }
         }
+        & .btn {
+            padding: 13px 28px;
+            border-radius: 17px;
+            border: 1px solid #770017;
+            background: #141726;
+            box-shadow: 3.512px 3.512px 0px 0px #000;
+            white-space: nowrap;
+            @include font-30;
+            color: $white;
+            &.bg-gradient {
+                background: linear-gradient(180deg, #4ECBC5 0%, #BE03FB 100%) !important;
+            }
+        }
         a.boxed-btn.transparent {
-            background: transparent;
+            background: rgba(254, 254, 181, 0.30);
             color: $white;
             text-shadow: 2px 2px 0px #0B0903;
             box-shadow: none;
@@ -109,10 +148,12 @@
             border: 1.461px solid #0B0903;
             padding: 13px;
             gap: 10px;
-            img {
-                max-width: 25px;
-                width: 25px;
-                height: 25px;
+            & a {
+                --width: 73px;
+                width: var(--width);
+                height: var(--width);
+                padding: 0;
+                flex: 0 0 auto;
             }
             a:hover {
                 color: $black;
@@ -121,5 +162,21 @@
                 box-shadow: 2.384px 2.384px 0px 0px $red;
             }
         }
+    }
+}
+
+.copytoclipboard-inner {
+    margin-top: 88px;
+    @include xl {
+        margin-top: 64px;
+    }
+    @include lg {
+        margin-top: 50px;
+    }
+    @include md {
+        margin-top: 40px;
+    }
+    @include sm {
+        margin-top: 30px;
     }
 }

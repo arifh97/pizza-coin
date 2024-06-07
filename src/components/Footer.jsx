@@ -5,8 +5,11 @@ import MarqueeBottom from './MarqueeBottom';
 import MarqueeTop from './MarqueeTop';
 import twitter from '../assets/img/twitter.svg'
 import telegram from '../assets/img/telegram.svg'
-import socialIcon3 from '../assets/img/socialIcon3.svg'
+import socialIcon3 from '../assets/img/socialIcon3.png'
+import socialIcon5 from '../assets/img/socialIcon5.png'
+import socialIcon6 from '../assets/img/socialIcon6.png'
 import socialIcon4 from '../assets/img/socialIcon4.svg'
+
 export default function Footer(){
     const socials = [
         {
@@ -15,15 +18,23 @@ export default function Footer(){
           },
           {
             icon:<img src={telegram} alt="Social Icon" />,
-            url: "https://t.me/+-uqniTrsSvc5ODZh",
+            url: "https://t.me/pepepizzeria",
           },
           {
             icon:<img src={socialIcon3} alt="Social Icon" />,
-            url: "https://raydium.io/swap/?inputCurrency=sol&outputCurrency=EiHvfN6HKvY6v6vjaoL1hpCAAxK5QMswDK7SRDM3u5kd&outputSymbol=RASTAMOU&fixed=in&inputMint=sol&outputMint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+            url: "https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY",
           },
           {
             icon:<img src={socialIcon4} alt="Social Icon" />,
-            url: "https://dexscreener.com/?__cf_chl_tk=6UxNBnayvW7qzQDE_iKEFbhF1nlxT5p8d_LpGuHs4Os-1716965713-0.0.1.1-1557",
+            url: "https://dexscreener.com/solana/h2ncmtgzebhgjvzcnuxmxpncdxt64qp3mxlygaztcl3j",
+          },
+          {
+            icon:<img src={socialIcon5} alt="Social Icon" />,
+            url: "https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL",
+          },
+          {
+            icon:<img src={socialIcon6} alt="Social Icon" />,
+            url: "https://www.dextools.io/app/en/solana/pair-explorer/H2NCMtgzeBhGjvZCnuXmxpncDxT64qP3MXLygaZtCL3j?t=1717760125430",
           },
         ];
       const currentYear = new Date().getFullYear(); 

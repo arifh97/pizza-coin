@@ -69,7 +69,7 @@ export default function Banner(){
                                     <li  key={index}> <a href={item.url} target='_blank' className='d-flex align-items-center justify-content-center'>{item.icon}</a></li>
                                     ))}
                                     <div className='responsiveSocial'>
-                                        <ul className="socials d-flex align-items-center flex-wrap gap-3">
+                                        <ul className="socials d-flex align-items-center flex-wrap">
                                             {socialsbanner.map((item, index) => (
                                                 <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
                                             ))}

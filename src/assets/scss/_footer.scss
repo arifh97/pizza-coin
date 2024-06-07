@@ -14,10 +14,10 @@
     }
     .footer-logo img{
         max-width: 150px;
-        margin-bottom: 45px;
+        margin-bottom: 10px;
         @include mmd{
             max-width: 110px;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
     }
     &-content{

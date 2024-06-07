@@ -1,6 +1,6 @@
 import { React } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import FooterLogo from '../assets/img/Pizza.png'
+import FooterLogo from '../assets/img/FooterLogo.png'
 import MarqueeBottom from './MarqueeBottom';
 import MarqueeTop from './MarqueeTop';
 import twitter from '../assets/img/twitter.svg'
@@ -51,7 +51,7 @@ export default function Footer(){
                                 <h3>pepe pizzeria </h3>
                                 <div className='social-logos mb-3 mt-3'>
                                     <h4 className='pb-2'>Follow us</h4>
-                                    <ul className="socials d-inline-flex gap-3 align-items-center">
+                                    <ul className="socials d-inline-flex flex-wrap justify-content-center gap-3 align-items-center">
                                         {socials.map((item, index)=>(
                                         <li  key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
                                         ))}

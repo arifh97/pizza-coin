@@ -31,12 +31,8 @@ export default function Roadmap() {
                   </figure>
                 </div>
                 <ul className='roadmaplist'>
-<<<<<<< HEAD
-                  <li>AirDrop of 500.000 $Pizpepe</li>
-=======
                   <li>AirDrop of 500.000 $PIZPEPE</li>
                   <li>Official token launch June 05.2024 . <a className='me-1' target='_blank' href="https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY">Raydium</a> <a target='_blank' href="https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL">Jupiter</a></li>
->>>>>>> 7b6ce1d8521b3792d110c76224c36d99596462ac
                 </ul>
                 <figure className='roadmapItemImg'>
                   <img src={roadmapItemImg1} alt="" />

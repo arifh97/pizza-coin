@@ -12,16 +12,12 @@ import emailjs from '@emailjs/browser';
 export default function Contact() {
     const [verfied, setVerifed] = useState(false);
     function onChange(value) {
-      console.log("Captcha value:", value);
-      setVerifed(true);
+        setVerifed(true);
     }
 
-
     const form = useRef();
-
     const sendEmail = (e) => {
         e.preventDefault();
-
         emailjs
             .sendForm('service_xu7picy', 'template_yu7gdbd', form.current, {
                 publicKey: 'yEj4uR_S3N6Y2WGKt',
@@ -66,7 +62,7 @@ export default function Contact() {
                                 <textarea name="message" id="" className="form-control" placeholder="Hle ,how are  you, how can i help you"></textarea>
                             </div>
                             <div className="form-box recapcha-from mt-4 pt-md-2 pt-lg-3">
-                                <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"  onChange={onChange}/>
+                                <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" onChange={onChange} />
                                 <button className="btn d-block text-center w-100 mt-4" type="submit" disabled={!verfied}>Send</button>
                             </div>
                         </form>

@@ -65,7 +65,7 @@ export default function Contact() {
                                 <label htmlFor="#" className="form-label mb-2">Message</label>
                                 <textarea name="message" id="" className="form-control" placeholder="Hle ,how are  you, how can i help you"></textarea>
                             </div>
-                            <div className="form-box mt-4 pt-md-2 pt-lg-3">
+                            <div className="form-box recapcha-from mt-4 pt-md-2 pt-lg-3">
                                 <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"  onChange={onChange}/>
                                 <button className="btn d-block text-center w-100" type="submit" disabled={!verfied}>Send</button>
                             </div>

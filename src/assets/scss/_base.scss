@@ -231,3 +231,22 @@ input::-webkit-inner-spin-button {
   .gt_container--hich1m .gt_switcher .gt_option, .gt_container--hich1m .gt_switcher .gt_selected a{
     width: 100% !important;
   }
+
+.recapcha-from{
+    #rc-anchor-alert, .rc-anchor-alert {
+        color: red;
+        font-size: 11px;
+        margin: 2px;
+        position: absolute;
+        top: 10px;
+        left: 16px;
+        max-width: 70%;
+    }
+}
+#rc-anchor-alert, .rc-anchor-alert {
+    color: red;
+    font-size: 11px !important;
+    top: 10px !important;
+    left: 16px !important;
+    max-width: 70% !important;
+}

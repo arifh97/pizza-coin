@@ -1,4 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap"
+import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import MarqueeTop from './MarqueeTop'
 import logo from '../assets/img/contact-logo.png'
 import bg from '../assets/img/contact-bg.png'
@@ -8,6 +10,12 @@ import emailjs from '@emailjs/browser';
 
 
 export default function Contact() {
+    const [verfied, setVerifed] = useState(false);
+    function onChange(value) {
+      console.log("Captcha value:", value);
+      setVerifed(true);
+    }
+
 
     const form = useRef();
 
@@ -58,7 +66,8 @@ export default function Contact() {
                                 <textarea name="message" id="" className="form-control" placeholder="Hle ,how are  you, how can i help you"></textarea>
                             </div>
                             <div className="form-box mt-4 pt-md-2 pt-lg-3">
-                                <button className="btn d-block text-center w-100" type="submit">Send</button>
+                                <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"  onChange={onChange}/>
+                                <button className="btn d-block text-center w-100" type="submit" disabled={!verfied}>Send</button>
                             </div>
                         </form>
                     </Col>

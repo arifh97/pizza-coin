@@ -67,7 +67,7 @@ export default function Contact() {
                             </div>
                             <div className="form-box recapcha-from mt-4 pt-md-2 pt-lg-3">
                                 <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"  onChange={onChange}/>
-                                <button className="btn d-block text-center w-100" type="submit" disabled={!verfied}>Send</button>
+                                <button className="btn d-block text-center w-100 mt-4" type="submit" disabled={!verfied}>Send</button>
                             </div>
                         </form>
                     </Col>

@@ -12,7 +12,7 @@ import Social from './Social';
 import twitter from '../assets/img/twitter.svg'
 import telegram from '../assets/img/telegram.svg'
 
-export default function Banner(){
+export default function Banner() {
     const socials = [
         // {
         //   icon:<img src={twitter} alt="Social Icon" />,
@@ -23,15 +23,15 @@ export default function Banner(){
         //   url: "https://t.me/+-uqniTrsSvc5ODZh",
         // },
         {
-          icon:<img src={socialIcon3} alt="Social Icon" />,
-          url: "https://www.dextools.io/app/en/solana/pair-explorer/H2NCMtgzeBhGjvZCnuXmxpncDxT64qP3MXLygaZtCL3j?t=1717760125430",
+            icon: <img src={socialIcon3} alt="Social Icon" />,
+            url: "https://www.dextools.io/app/en/solana/pair-explorer/H2NCMtgzeBhGjvZCnuXmxpncDxT64qP3MXLygaZtCL3j?t=1717760125430",
         },
         {
-          icon:<img src={socialIcon4} alt="Social Icon" />,
-          url: "https://dexscreener.com/solana/h2ncmtgzebhgjvzcnuxmxpncdxt64qp3mxlygaztcl3j",
+            icon: <img src={socialIcon4} alt="Social Icon" />,
+            url: "https://dexscreener.com/solana/h2ncmtgzebhgjvzcnuxmxpncdxt64qp3mxlygaztcl3j",
         },
-      ];
-      const socialsbanner = [
+    ];
+    const socialsbanner = [
         {
             icon: <img src={twitter} alt="Social Icon" />,
             url: "https://x.com/pizpepe",
@@ -41,7 +41,7 @@ export default function Banner(){
             url: "https://t.me/+-uqniTrsSvc5ODZh",
         },
     ];
-    return(
+    return (
         <div className="banner">
             <div className="banner-social position-absolute d-flex align-items-end justify-content-center"><Social /></div>
             <figure className='heroBg'>
@@ -63,17 +63,17 @@ export default function Banner(){
                                         <img src={jup} alt="" /> <span>Buy now</span>
                                     </a>
                                 </div>
-                                
+
                                 <ul className="socials d-flex align-items-center p-0 border-0 mb-5 mb-md-0">
-                                    {socials.map((item, index)=>(
-                                    <li  key={index}> <a href={item.url} target='_blank' className='d-flex align-items-center justify-content-center'>{item.icon}</a></li>
+                                    {socials.map((item, index) => (
+                                        <li key={index}> <a href={item.url} target='_blank' className='d-flex align-items-center justify-content-center'>{item.icon}</a></li>
                                     ))}
                                     <div className='responsiveSocial'>
                                         <ul className="socials d-flex align-items-center flex-wrap">
                                             {socialsbanner.map((item, index) => (
                                                 <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
                                             ))}
-                                        </ul> 
+                                        </ul>
                                     </div>
                                 </ul>
                             </div>

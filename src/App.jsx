@@ -5,7 +5,8 @@ import About from './components/About'
 import Tokenomics from './components/Tokenomics'
 import Footer from './components/Footer'
 import Roadmap from './components/Roadmap'
-import Contact from './components/Contact'
+import Faq from './components/Faq'
+// import Contact from './components/Contact'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
       <About />
       <Tokenomics />
       <Roadmap />
-      <Contact />
+      {/* <Contact /> */}
+      <Faq />
       <Footer />
     </>
   )

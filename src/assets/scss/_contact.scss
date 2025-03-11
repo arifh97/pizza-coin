@@ -1,3 +1,21 @@
+.faq {
+    padding-top: var(--pt, 170px);
+    padding-bottom: var(--pb, 215px);
+    @include lg {
+        --pt: 150px;
+        --pb: 180px;
+        padding: 60px 52px;
+    }
+    @include md {
+        --pt: 120px;
+        --pb: 150px;
+    }
+    @include sm {
+        --pt: 80px;
+        --pb: 130px;
+    }
+}
+
 .contact {
     padding-top: var(--pt, 170px);
     padding-bottom: var(--pb, 215px);

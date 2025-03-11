@@ -6,14 +6,8 @@ import logo from '../assets/img/logo.png'
 import Social from './Social';
 export default function Header() {
   const [isMenu, setIsMenu] = useState(false);
-  const handleTouchStart = (event) => {
-    navigate(event);
-    setIsMenu(!isMenu);
-  };
-  // State to hold the system language
-  const [language, setLanguage] = useState('');
 
-  // Use useEffect to get the language when the component mounts
+  const [language, setLanguage] = useState('');
   useEffect(() => {
     const systemLanguage = navigator.language || navigator.userLanguage;
     setLanguage(systemLanguage);
@@ -50,16 +44,6 @@ export default function Header() {
     }
   }, [language]);
 
-
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-  const buyPizzaBtn = "Buy Pizza";
-  const buyPizzaBtnUrl = "https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY"
   return (
     <>
       <header className={`heading ${scrolled ? 'position-fixed' : ''}`} id="LandingHeader">
@@ -79,10 +63,12 @@ export default function Header() {
             <ul className="main_menu d-lg-flex align-items-center">
               <Link to="banner" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >HOME</Link>
               <Link to="about" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >ABOUT</Link>
-              <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Pizzerianomics</Link>
-              <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Pizzeriamap</Link>
+              <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >PIZZAnomics</Link>
+              <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Roadmap</Link>
+              <a href='#' target='_blank' className='heading-link text-uppercase'>White paper</a>
+              <Link to="faq" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >FAQ</Link>
             </ul>
-            <div className="forResponsive  d-lg-none mt-4">
+            <div className="forResponsive d-lg-none mt-4">
               <Social />
             </div>
           </nav>

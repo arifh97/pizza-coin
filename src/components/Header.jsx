@@ -75,8 +75,9 @@ export default function Header() {
           <Link className="logo" to="banner" spy={true} smooth={true} offset={-150} duration={600} >
             <img src={logo} alt='logo' />
           </Link>
-          <div className='d-none d-lg-block'>
+          <div className='hidden md:flex items-center gap-2'>
             <Social />
+            <a href="#" className="btn">Buy Pizza</a>
           </div>
           <div className="heading-actions d-flex align-items-center flex-wrap d-lg-none">
             <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>

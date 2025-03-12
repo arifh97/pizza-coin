@@ -46,22 +46,12 @@ export default function bannerCard2({ className }) {
         } else {
             e.target.type = "number"
         }
-
-
-
         let solTwo = parseFloat(e.target.value);
-
-
-
         if (isNaN(solTwo)) {
             solTwo = 0;
         } else {
             solTwo = parseFloat(solTwo.toFixed(2));
         }
-
-
-
-
         setSolAmountTwo(solTwo);
         setPepetoAmountTwo((solTwo * conversionRateTwo).toFixed(0));
     }
@@ -74,8 +64,6 @@ export default function bannerCard2({ className }) {
 
     const handleSolChange = (e) => {
         const inputValue = e.target.value;
-
-
         if (inputValue == "") {
             e.target.type = "text"
             setSolAmount("");
@@ -85,10 +73,6 @@ export default function bannerCard2({ className }) {
         } else {
             e.target.type = "number"
         }
-
-
-
-
         let sol = parseFloat(inputValue);
         if (isNaN(sol)) {
 
@@ -96,10 +80,6 @@ export default function bannerCard2({ className }) {
         } else {
             sol = parseFloat(sol.toFixed(2));
         }
-
-
-
-
         setSolAmount(sol);
         setPepetoAmount((sol * conversionRate).toFixed(0));
     };
@@ -108,8 +88,6 @@ export default function bannerCard2({ className }) {
 
         const inputValue = e.target.value;
         let pepeto = parseFloat(inputValue);
-
-
         if (inputValue == "") {
             e.target.type = "text"
             setSolAmount("");
@@ -119,17 +97,12 @@ export default function bannerCard2({ className }) {
         } else {
             e.target.type = "number"
         }
-
-
-
         if (isNaN(pepeto)) {
             pepeto = 0;
         } else {
 
             pepeto = parseFloat(pepeto.toFixed(0));
         }
-
-
         setPepetoAmount(pepeto);
         setSolAmount((pepeto / conversionRate).toFixed(2));
     };
@@ -138,10 +111,7 @@ export default function bannerCard2({ className }) {
     const [solAmountTwo, setSolAmountTwo] = useState(null);
     const [pepetoAmountTwo, setPepetoAmountTwo] = useState(null);
     const conversionRateTwo = 500; // 1 SOL = 10000 PEPETO
-
-
     const [isBuy, setIsBuy] = useState(false);
-
     const [tokenAddress, setTokenAddress] = useState('GVUE6se8FUnhcyF1Sg9mdKeTLeHBc18MEAKgHKw4Ucr9')
     const [copied, setCopied] = useState(false);
     const copyHandle = () => {

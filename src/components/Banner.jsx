@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 import { Col, Container, Row } from 'react-bootstrap'
 import heroBg from '../assets/img/heroBG.jpg'
-import BannerCard2 from './BannerCard2'
+import BannerCard2 from './bannerCard2'
 
 import TimeLimit from './TimeLimit'
 import solana from '../assets/img/solona.png'
@@ -57,7 +57,7 @@ export default function Banner() {
                             <p className='des'>Join us and become a part of Pepe Restaurante.</p>
                             <div className="flex flex-col lg:flex-row items-center gap-6">
                                 {d_tab_btn.name === 'buy' &&
-                                    <div className="banner-card flex-[0_0_auto] text-black font-Helvetica w-full max-w-[513px] text-center py-4 md:py-7 px-4 md:px-8 rounded-3xl md:rounded-[32px] border-[1.5px] border-black bg-[#FFD331] backdrop-blur-[8px]">
+                                    <div  data-aos="fade-left" data-aos-offset="" data-aos-delay="" className="banner-card flex-[0_0_auto] text-black font-Helvetica w-full max-w-[513px] text-center py-4 md:py-7 px-4 md:px-8 rounded-3xl md:rounded-[32px] border-[1.5px] border-black bg-[#FFD331] backdrop-blur-[8px]">
                                         <p className='text-white text-center text-2xl md:text-3xl xl:text-[32px] font-black tracking-[0.64px] text-stroke mb-2 md:mb-4'>PEPIZ Presale is live</p>
                                         <TimeLimit />
                                         <p className='text-sm font-Helvetica text-black my-2 md:my-4 mt-1 md:mt-3 font-normal'>$PEPIZ Raised: <span className='text-lg font-black'>$1,474,661</span></p>

@@ -190,6 +190,7 @@ export default function Banner() {
                                         <span>Presaleshild </span>
                                     </p>
                                 </div>
+                                
                                 <div className="flex flex-col w-full items-center lg:items-start gap-3 md:gap-[17px]">
                                     <button className="btn !w-full md:!w-[162px] !border-black !rounded-lg text-center !font-Helvetica !font-normal h-full !text-base !py-3 md:!py-4 !bg-white text-black !capitalize">BUY </button>
                                     <button className="btn !w-full md:!w-[162px] !border-black !rounded-lg text-center !font-Helvetica !font-normal h-full !text-base !py-3 md:!py-4 !bg-white text-black !capitalize">STAKE </button>

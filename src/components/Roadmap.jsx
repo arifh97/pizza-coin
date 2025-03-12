@@ -23,30 +23,31 @@ export default function Roadmap() {
           </Row>
           <Row>
             <div className="roadmap-wrapper">
-              <div className="wrapper-item">
-                <div className='title' data-aos="fade-right">
+              <div className="wrapper-item hover:!rotate-0 duration-500 transition-all cursor-pointer">
+                <div className='title'>
                   <h4>Stage 1</h4>
                   <figure className='roadmaptitleBg'>
                     <img src={roadmaptitleBg} alt="" />
                   </figure>
-                </div>                
-                <ul className='roadmaplist' data-aos="fade-up">
+                </div>
+                
+                <ul className='roadmaplist'>
                 <h4 className='text-xl lg:text-2xl xl:text-[28px] font-bold !leading-normal'>The Journey Begins – Getting Noticed and Starting the Pre-Sale</h4>
                 <p className='text-lg text-black font-light !leading-normal'>It’s time to introduce the <span className='font-bold'>PEPIZ</span> Coin to the world! We’re kicking off our pre-sale and focusing on building a passionate community that will support us from day one – together, we’ll make <span className='font-bold'>PEPIZ</span> a true phenomenon!</p>
                 </ul>
-                <figure className='roadmapItemImg' data-aos="fade-left">
+                <figure className='roadmapItemImg'>
                   <img src={roadmapItemImg1} alt="" />
                 </figure>
               </div>
 
-              <div className="wrapper-item">
-                <div className='title' data-aos="flip-up">
+              <div className="wrapper-item hover:!rotate-0 duration-500 transition-all cursor-pointer">
+                <div className='title'>
                   <h4>Stage 2</h4>
                   <figure className='roadmaptitleBg'>
                     <img src={roadmaptitleBg} alt="" />
                   </figure>
                 </div>
-                <ul className='roadmaplist' data-aos="fade-up" data-aos-offset="0">
+                <ul className='roadmaplist'>
                   <h4 className='text-xl lg:text-2xl xl:text-[28px] font-bold !leading-normal'>The Hype Rises – Advertising and Listing on Major Platforms</h4>
                   <p className='text-lg text-black font-light !leading-normal'>With a clear goal ahead, we’re setting sail for the next step! We’ll ramp up visibility with targeted ads on major crypto websites and platforms like CoinMarketCap and CoinGecko – <span className='font-bold'>PEPIZ</span> won’t be ignored!</p>
                 </ul>
@@ -57,7 +58,7 @@ export default function Roadmap() {
                 </div>
               </div>
 
-              <div className="wrapper-item">
+              <div className="wrapper-item hover:!rotate-0 duration-500 transition-all cursor-pointer">
                 <div className='title'>
                   <h4>Stage 3</h4>
                   <figure className='roadmaptitleBg'>

@@ -32,16 +32,16 @@ export default function TimeLimit({ className = "", date = "2024-12-29T23:59:59"
     }, []);
 
     if (!timeLeft) {
-        return <div className="text-white text-center">Offer time ended</div>;
+        return <div className="text-black text-center">Offer time ended</div>;
     }
 
 
     return (
-        <div className={`${className} flex items-center justify-between w-full px-[30px] py-5 min-h-[100px] md:min-h-[138px] rounded-[20px] h-5 bg-[linear-gradient(92deg,#AE194E_1.67%,#5938C7_104.12%)] shadow-[3px_3px_0px_0px_#FFF]`}>
+        <div className={`${className} flex items-center justify-between w-full max-w-[395px] mx-auto min-h-[73px] rounded-[20px] h-5`}>
             {Object.entries(timeLeft).map(([unit, value], index) => (
-                <div key={index} className='flex flex-col gap-9 md:gap-12'>
-                    <p className='text-white text-lg !leading-[0%] capitalize'>{unit}</p>
-                    <span className='text-[40px] md:text-[44px] text-white !leading-[0%]'>{value}</span>
+                <div key={index} className='flex flex-col gap-3'>
+                    <p className='text-black text-sm font-medium !leading-[0%] capitalize'>{unit}</p>
+                    <span className='text-xl w-[42px] h-11 flex items-center justify-center text-black rounded-[11px] border-[1.066px] border-black bg-[#F3F3F3] shadow-[2px_2px_4px_0px_#B39A3F] !leading-[0%]'>{value}</span>
                 </div>
             ))}
         </div>

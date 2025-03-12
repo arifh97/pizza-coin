@@ -103,12 +103,12 @@
         position: relative;
         z-index: 9;
         h1 {
-            margin-bottom: 25px;
+            margin-bottom: -40px;
         }
-        p {
+        & .des {
             @include font-28;
             margin-bottom: 38px;
-            max-width: 340px;
+            // max-width: 340px;
             line-height: normal;
             @include mmd {
                 margin-inline: auto;
@@ -126,7 +126,7 @@
             white-space: nowrap;
             @include font-30;
             color: $white;
-            @include sm{
+            @include sm {
                 padding: 10px 15px;
                 border-radius: 8px;
                 width: 45%;
@@ -135,7 +135,7 @@
             &.bg-gradient {
                 background: linear-gradient(180deg, #4ECBC5 0%, #BE03FB 100%) !important;
             }
-            img{
+            img {
                 max-width: 40px;
             }
         }
@@ -152,7 +152,7 @@
             font-weight: 700;
             text-transform: uppercase;
             padding-bottom: 12px;
-            @include sm{
+            @include sm {
                 min-width: 100%;
                 max-width: 100%;
                 width: 100%;
@@ -177,29 +177,43 @@
                 border: 1.461px solid $red;
                 box-shadow: 2.384px 2.384px 0px 0px $red;
             }
-            .responsiveSocial{
-                display: none; 
-                @include mmd{
-                 display: block;
+            .responsiveSocial {
+                display: none;
+                @include mmd {
+                    display: block;
                 }
-                 .socials {
-                     border-radius: 11.689px;
-                     border: 0 !important;
-                     padding: 0 !important;
-                     gap: 10px;
-                     a{
+                .socials {
+                    border-radius: 11.689px;
+                    border: 0 !important;
+                    padding: 0 !important;
+                    gap: 10px;
+                    a {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                     }
-                 }
-             }
+                    }
+                }
+            }
         }
     }
-
-    .banner-social{
-        @include mmd{
+    .banner-social {
+        @include mmd {
             display: none !important;
+        }
+    }
+    &-btn {
+        display: flex;
+        padding: 11px 16px;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid #AC9334;
+        background: #FFD746;
+        box-shadow: 0px 4px 8px 0px #C6A52C;
+    }
+    &-card {
+        & .text-stroke {
+            -webkit-text-stroke: 1px $black;
+            font-family: $font-2;
         }
     }
 }

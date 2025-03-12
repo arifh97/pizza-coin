@@ -78,8 +78,7 @@ export default function Banner() {
                         <div className="banner-content text-center text-lg-start">
                             <h1> <span>Pepe</span> Pizzeria</h1>
                             <p className='des'>Join us and become a part of Pepe Restaurante.</p>
-                            <div className="flex items-center gap-6">
-
+                            <div className="flex flex-col lg:flex-row items-center gap-6">
                                 <div className="banner-card flex-[0_0_auto] text-black font-Helvetica w-full max-w-[513px] text-center py-7 px-8 rounded-[32px] border-[1.5px] border-black bg-[#FFD331] backdrop-blur-[8px]">
                                     <p className='text-white text-center text-[32px] font-black tracking-[0.64px] text-stroke mb-4'>PEPIZ Presale is live</p>
                                     <TimeLimit />

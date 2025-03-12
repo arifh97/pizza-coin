@@ -104,12 +104,30 @@
         z-index: 9;
         h1 {
             margin-bottom: -40px;
+            @include xxl {
+                margin-bottom: -20px;
+            }
+            @include xl {
+                margin-bottom: -20px;
+            }
+            @include lg {
+                margin-bottom: -20px;
+            }
+            @include mmd {
+                margin-bottom: -20px;
+            }
         }
         & .des {
             @include font-28;
             margin-bottom: 38px;
             // max-width: 340px;
             line-height: normal;
+            @include xl {
+                margin-bottom: 28px;
+            }
+            @include lg {
+                margin-bottom: 20px;
+            }
             @include mmd {
                 margin-inline: auto;
             }

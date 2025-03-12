@@ -15,9 +15,9 @@
 }
 .rfm-child img {
     @include md{
-        max-width: 60px;
+        max-width: 160px;
     }
     @include sm{
-        max-width: 45px;
+        max-width: 145px;
     }
 }

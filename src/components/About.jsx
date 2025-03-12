@@ -4,12 +4,12 @@ import aboutBg from '../assets/img/aboutBg.jpg'
 import aboutTopShap from '../assets/img/aboutTopShap.png'
 import aboutBottomShap from '../assets/img/aboutBottomShap.png'
 import coffe from '../assets/img/coffe.gif'
-import MarqueeTop from './MarqueeTop'
+import PageMarquee from './PageMarquee'
 import MarqueeBottom from './MarqueeBottom'
 export default function About(){
     return(
         <div className="about">
-            <MarqueeTop />
+            <PageMarquee />
             <figure className='aboutTopShap'>
                 <img src={aboutTopShap} alt="" />
             </figure>

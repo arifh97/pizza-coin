@@ -25,6 +25,8 @@ export default {
         },
         fontFamily: {
             Helvetica: `"Helvetica Neue",sans-serif`,
+            FormulaCondensedBold: `"FormulaCondensedBold",sans-serif`,
+            FormulaCondensedLight: `"FormulaCondensedLight",sans-serif`,
         },
     },
     darkMode: "class",

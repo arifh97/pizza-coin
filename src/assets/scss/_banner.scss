@@ -227,9 +227,8 @@
         padding: 11px 16px;
         align-items: center;
         border-radius: 8px;
-        border: 1px solid #AC9334;
+        border: 1px solid #AC9334 !important;
         background: #FFD746;
-        box-shadow: 0px 4px 8px 0px #C6A52C;
     }
     &-card {
         & .text-stroke {

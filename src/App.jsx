@@ -14,12 +14,12 @@ function App() {
     <>
       <Header />
       <Banner />
-      {/* <About />
+      <About />
       <Tokenomics />
-      <Roadmap /> */}
+      <Roadmap />
       {/* <Contact /> */}
-      {/* <Faq />
-      <Footer /> */}
+      <Faq />
+      <Footer />
     </>
   )
 }

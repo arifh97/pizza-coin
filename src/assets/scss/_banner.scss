@@ -113,14 +113,16 @@
             @include lg {
                 margin-bottom: -20px;
             }
-            @include mmd {
-                margin-bottom: -20px;
+            @include md {
+                margin-bottom: -10px;
+            }
+            @include sm {
+                margin-bottom: 0;
             }
         }
         & .des {
             @include font-28;
             margin-bottom: 38px;
-            // max-width: 340px;
             line-height: normal;
             @include xl {
                 margin-bottom: 28px;
@@ -130,6 +132,7 @@
             }
             @include mmd {
                 margin-inline: auto;
+                margin-bottom: 20px;
             }
             @include sm {
                 font-size: 25px;

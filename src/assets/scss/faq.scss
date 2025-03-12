@@ -1,0 +1,9 @@
+.faq{
+    & .accordion{
+        border: dashed 4px #0000 !important;
+       & .accordion-item{
+        background-color: #FFC446 !important;
+       
+       } 
+    }
+}

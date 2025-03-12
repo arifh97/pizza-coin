@@ -58,23 +58,23 @@
     right: 0;
 }
 
-@mixin font-247 {
-    font-size: 247px;
-    line-height: 100%;
+@mixin font-167 {
+    font-size: 167px;
+    line-height: 150%;
     @include xxl {
-        font-size: 150px;
-    }
-    @include xl {
         font-size: 120px;
     }
-    @include lg {
+    @include xl {
         font-size: 100px;
     }
-    @include md {
+    @include lg {
         font-size: 80px;
     }
+    @include md {
+        font-size: 60px;
+    }
     @include sm {
-        font-size: 65px;
+        font-size: 50px;
     }
 }
 

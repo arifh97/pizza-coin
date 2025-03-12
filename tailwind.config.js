@@ -23,6 +23,9 @@ export default {
             '2xl': '1320px',
             '3xl': '1440px'
         },
+        fontFamily: {
+            Helvetica: `"Helvetica Neue",sans-serif`,
+        },
     },
     darkMode: "class",
     plugins: [],

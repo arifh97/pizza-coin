@@ -12,7 +12,7 @@ export default function Accordion({ items, activeItem = null }) {
   return (
     <div className="accordion">
       {items.map((item, index) => (
-        <div key={index} className={`accordion-item rounded-2xl border border-solid border-gray-100 overflow-hidden ${activeIndex === index ? 'bg-gray-100' : 'bg-transparent'} ${index === items.length - 1 ? 'mb-0' : 'mb-5 md:mb-6'}`}>
+        <div key={index} className={`accordion-item rounded-2xl border border-solid border-gray-100 overflow-hidden ${activeIndex === index ? 'bg-[#FFC446]' : 'bg-transparent'} ${index === items.length - 1 ? 'mb-0' : 'mb-5 md:mb-6'}`}>
           <button onClick={() => toggleAccordion(index)} className={`accordion-button transition-none p-4 md:p-6 text-black text-start flex items-center justify-between w-full bg-transparent border-0 text-lg md:text-2xl !leading-normal font-normal ${activeIndex === index ? "!pb-0" : ""}`}>
             <span>{item.title}</span>
             {activeIndex != index ? (<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">

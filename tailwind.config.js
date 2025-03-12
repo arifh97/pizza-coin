@@ -27,6 +27,7 @@ export default {
             Helvetica: `"Helvetica Neue",sans-serif`,
             FormulaCondensedBold: `"FormulaCondensedBold",sans-serif`,
             FormulaCondensedLight: `"FormulaCondensedLight",sans-serif`,
+            dm: `'DM Sans',sans-serif`
         },
     },
     darkMode: "class",

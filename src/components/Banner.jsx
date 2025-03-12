@@ -3,11 +3,6 @@ import React, { useState } from 'react'
 
 import { Col, Container, Row } from 'react-bootstrap'
 import heroBg from '../assets/img/heroBG.jpg'
-import socialIcon3 from '../assets/img/socialIcon3.png'
-import socialIcon4 from '../assets/img/socialIcon4.svg'
-import Social from './Social';
-import twitter from '../assets/img/twitter.svg'
-import telegram from '../assets/img/telegram.svg'
 
 import TimeLimit from './TimeLimit'
 import solana from '../assets/img/solona.png'
@@ -15,35 +10,6 @@ import usdc from '../assets/img/usdc.png'
 import pizzaIcon from '../assets/img/Pizza-icon.png'
 
 export default function Banner() {
-    const socials = [
-        // {
-        //   icon:<img src={twitter} alt="Social Icon" />,
-        //   url: "https://x.com/pizpepe",
-        // },
-        // {
-        //   icon:<img src={telegram} alt="Social Icon" />,
-        //   url: "https://t.me/+-uqniTrsSvc5ODZh",
-        // },
-        {
-            icon: <img src={socialIcon3} alt="Social Icon" />,
-            url: "https://www.dextools.io/app/en/solana/pair-explorer/H2NCMtgzeBhGjvZCnuXmxpncDxT64qP3MXLygaZtCL3j?t=1717760125430",
-        },
-        {
-            icon: <img src={socialIcon4} alt="Social Icon" />,
-            url: "https://dexscreener.com/solana/h2ncmtgzebhgjvzcnuxmxpncdxt64qp3mxlygaztcl3j",
-        },
-    ];
-    const socialsbanner = [
-        {
-            icon: <img src={twitter} alt="Social Icon" />,
-            url: "https://x.com/pizpepe",
-        },
-        {
-            icon: <img src={telegram} alt="Social Icon" />,
-            url: "https://t.me/+-uqniTrsSvc5ODZh",
-        },
-    ];
-
     const btns = [
         {
             logo: solana,
@@ -55,19 +21,17 @@ export default function Banner() {
             logo: usdc,
             name: 'usdc',
             des: 'Chain SOL',
-            value: 0.000000092
+            value: 0.05
         },
     ]
     const [selectBtn, setSelectBtn] = useState(btns[1]);
     const tokenHandle = (e) => {
         setSelectBtn(e)
-        setToken(0);
     }
     const [token, setToken] = useState(0)
 
     return (
         <div className="banner">
-            {/* <div className="banner-social position-absolute d-flex align-items-end justify-content-center"><Social /></div> */}
             <figure className='heroBg'>
                 <img src="" alt="" />
                 <img src={heroBg} alt="" />
@@ -90,8 +54,8 @@ export default function Banner() {
                                         <div className="flex items-center justify-center gap-2 xl:gap-[10px] ">
                                             <p className='text-sm uppercase text-black font-Helvetica'>Your purchased $pepiz</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                                                <g clip-path="url(#clip0_7600_9435)">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.499512 8.27385C0.499512 4.03967 3.932 0.607178 8.16618 0.607178C12.4003 0.607178 15.8328 4.03967 15.8328 8.27385C15.8328 12.508 12.4003 15.9405 8.16618 15.9405C3.932 15.9405 0.499512 12.508 0.499512 8.27385ZM8.16618 2.60718C5.03657 2.60718 2.49952 5.14424 2.49952 8.27385C2.49952 11.4034 5.03657 13.9405 8.16618 13.9405C11.2958 13.9405 13.8328 11.4034 13.8328 8.27385C13.8328 5.14424 11.2958 2.60718 8.16618 2.60718ZM8.16618 7.27385C8.71847 7.27385 9.16618 7.72156 9.16618 8.27385V10.9405C9.16618 11.4928 8.71847 11.9405 8.16618 11.9405C7.6139 11.9405 7.16618 11.4928 7.16618 10.9405V8.27385C7.16618 7.72156 7.6139 7.27385 8.16618 7.27385ZM8.16618 6.27385C8.53437 6.27385 8.83285 5.97537 8.83285 5.60718C8.83285 5.23899 8.53437 4.94051 8.16618 4.94051C7.79799 4.94051 7.49951 5.23899 7.49951 5.60718C7.49951 5.97537 7.79799 6.27385 8.16618 6.27385Z" fill="#6F5F24" />
+                                                <g clipPath="url(#clip0_7600_9435)">
+                                                    <path fillRule="evenodd" clipRule="evenodd" d="M0.499512 8.27385C0.499512 4.03967 3.932 0.607178 8.16618 0.607178C12.4003 0.607178 15.8328 4.03967 15.8328 8.27385C15.8328 12.508 12.4003 15.9405 8.16618 15.9405C3.932 15.9405 0.499512 12.508 0.499512 8.27385ZM8.16618 2.60718C5.03657 2.60718 2.49952 5.14424 2.49952 8.27385C2.49952 11.4034 5.03657 13.9405 8.16618 13.9405C11.2958 13.9405 13.8328 11.4034 13.8328 8.27385C13.8328 5.14424 11.2958 2.60718 8.16618 2.60718ZM8.16618 7.27385C8.71847 7.27385 9.16618 7.72156 9.16618 8.27385V10.9405C9.16618 11.4928 8.71847 11.9405 8.16618 11.9405C7.6139 11.9405 7.16618 11.4928 7.16618 10.9405V8.27385C7.16618 7.72156 7.6139 7.27385 8.16618 7.27385ZM8.16618 6.27385C8.53437 6.27385 8.83285 5.97537 8.83285 5.60718C8.83285 5.23899 8.53437 4.94051 8.16618 4.94051C7.79799 4.94051 7.49951 5.23899 7.49951 5.60718C7.49951 5.97537 7.79799 6.27385 8.16618 6.27385Z" fill="#6F5F24" />
                                                 </g>
                                                 <defs>
                                                     <clipPath id="clip0_7600_9435">
@@ -103,8 +67,8 @@ export default function Banner() {
                                         <div className="flex items-center mt-2 md:mt-3 justify-center gap-2 xl:gap-[10px] ">
                                             <p className='text-sm uppercase  text-black font-Helvetica'>your stakeable $pepiz</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                                                <g clip-path="url(#clip0_7600_9435)">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.499512 8.27385C0.499512 4.03967 3.932 0.607178 8.16618 0.607178C12.4003 0.607178 15.8328 4.03967 15.8328 8.27385C15.8328 12.508 12.4003 15.9405 8.16618 15.9405C3.932 15.9405 0.499512 12.508 0.499512 8.27385ZM8.16618 2.60718C5.03657 2.60718 2.49952 5.14424 2.49952 8.27385C2.49952 11.4034 5.03657 13.9405 8.16618 13.9405C11.2958 13.9405 13.8328 11.4034 13.8328 8.27385C13.8328 5.14424 11.2958 2.60718 8.16618 2.60718ZM8.16618 7.27385C8.71847 7.27385 9.16618 7.72156 9.16618 8.27385V10.9405C9.16618 11.4928 8.71847 11.9405 8.16618 11.9405C7.6139 11.9405 7.16618 11.4928 7.16618 10.9405V8.27385C7.16618 7.72156 7.6139 7.27385 8.16618 7.27385ZM8.16618 6.27385C8.53437 6.27385 8.83285 5.97537 8.83285 5.60718C8.83285 5.23899 8.53437 4.94051 8.16618 4.94051C7.79799 4.94051 7.49951 5.23899 7.49951 5.60718C7.49951 5.97537 7.79799 6.27385 8.16618 6.27385Z" fill="#6F5F24" />
+                                                <g clipPath="url(#clip0_7600_9435)">
+                                                    <path fillRule="evenodd" clipRule="evenodd" d="M0.499512 8.27385C0.499512 4.03967 3.932 0.607178 8.16618 0.607178C12.4003 0.607178 15.8328 4.03967 15.8328 8.27385C15.8328 12.508 12.4003 15.9405 8.16618 15.9405C3.932 15.9405 0.499512 12.508 0.499512 8.27385ZM8.16618 2.60718C5.03657 2.60718 2.49952 5.14424 2.49952 8.27385C2.49952 11.4034 5.03657 13.9405 8.16618 13.9405C11.2958 13.9405 13.8328 11.4034 13.8328 8.27385C13.8328 5.14424 11.2958 2.60718 8.16618 2.60718ZM8.16618 7.27385C8.71847 7.27385 9.16618 7.72156 9.16618 8.27385V10.9405C9.16618 11.4928 8.71847 11.9405 8.16618 11.9405C7.6139 11.9405 7.16618 11.4928 7.16618 10.9405V8.27385C7.16618 7.72156 7.6139 7.27385 8.16618 7.27385ZM8.16618 6.27385C8.53437 6.27385 8.83285 5.97537 8.83285 5.60718C8.83285 5.23899 8.53437 4.94051 8.16618 4.94051C7.79799 4.94051 7.49951 5.23899 7.49951 5.60718C7.49951 5.97537 7.79799 6.27385 8.16618 6.27385Z" fill="#6F5F24" />
                                                 </g>
                                                 <defs>
                                                     <clipPath id="clip0_7600_9435">
@@ -149,7 +113,7 @@ export default function Banner() {
                                                     <img src={pizzaIcon} alt="" />
                                                 </div>
                                                 <span className='text-base text-black'>
-                                                    {(selectBtn.value * token).toFixed(0)}
+                                                    {(selectBtn.value * token).toFixed(2)}
                                                 </span>
                                             </div>
                                         </div>
@@ -162,7 +126,7 @@ export default function Banner() {
                                         <span>Powered by</span>
                                         <div className="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                                                <g clip-path="url(#clip0_7600_9492)">
+                                                <g clipPath="url(#clip0_7600_9492)">
                                                     <circle cx="8.16602" cy="8.27124" r="8" fill="#A7A7F0" />
                                                     <g filter="url(#filter0_d_7600_9492)">
                                                         <path d="M10.9361 5.19667C10.5987 5.13786 10.2613 5.06047 9.93316 4.96451C9.41932 4.81284 8.91787 4.61163 8.44122 4.3671C8.35145 4.32067 8.24621 4.32067 8.15644 4.3671C7.67975 4.61164 7.17829 4.81284 6.6645 4.96451C6.33639 5.06047 5.99898 5.13785 5.66158 5.19667C5.21584 5.27096 4.89392 5.65479 4.89392 6.10982V9.11233C4.89392 9.89857 5.23132 10.6538 5.81636 11.1831L7.67668 12.8577C7.85621 13.0156 8.07598 13.0961 8.29885 13.0961C8.52172 13.0961 8.7415 13.0156 8.92103 12.8577L10.7813 11.1831C11.3664 10.6538 11.7038 9.89852 11.7038 9.11233V6.10982C11.7038 5.65479 11.3818 5.27096 10.9361 5.19667ZM10.0663 7.64824L8.20902 9.50549C8.14711 9.56431 8.06973 9.59526 7.98924 9.59526C7.90875 9.59526 7.83137 9.56431 7.76946 9.50549L6.84084 8.57687C6.72011 8.45614 6.72011 8.25804 6.84084 8.13732C6.96156 8.0166 7.15967 8.01659 7.28039 8.13732L7.98923 8.84927L9.62668 7.20874C9.74741 7.08802 9.94552 7.08802 10.0662 7.20874C10.1869 7.32947 10.187 7.52753 10.0663 7.64824Z" fill="#C7F8FE" />
@@ -171,8 +135,8 @@ export default function Banner() {
                                                     <path d="M9.25721 4.16358C9.32519 4.70901 9.28176 5.26256 9.12953 5.7907C8.9773 6.31884 8.71945 6.81059 8.3716 7.23615C8.02374 7.66172 7.59312 8.01224 7.10581 8.26649C6.61851 8.52075 6.08467 8.67344 5.53662 8.71531L5.44074 7.46049C5.81896 7.43159 6.18737 7.32622 6.52367 7.15075C6.85997 6.97529 7.15715 6.73338 7.39721 6.43969C7.63728 6.146 7.81523 5.80664 7.92028 5.44216C8.02534 5.07767 8.05531 4.69566 8.00839 4.31925L9.25721 4.16358Z" fill="#A3A6EF" />
                                                 </g>
                                                 <defs>
-                                                    <filter id="filter0_d_7600_9492" x="2.22725" y="2.99894" width="12.1431" height="14.0972" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <filter id="filter0_d_7600_9492" x="2.22725" y="2.99894" width="12.1431" height="14.0972" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                                                         <feOffset dy="1.33333" />
                                                         <feGaussianBlur stdDeviation="1.33333" />
@@ -195,31 +159,6 @@ export default function Banner() {
                                     <button className="btn !w-full md:!w-[162px] !border-black !rounded-lg text-center !font-Helvetica !font-normal h-full !text-base !py-3 md:!py-4 !bg-white text-black !capitalize">STAKE </button>
                                 </div>
                             </div>
-
-                            {/* <div className='d-flex justify-content-center justify-content-lg-start align-items-center flex-wrap gap-4'>
-                                <div className='d-flex justify-content-center justify-content-lg-start align-items-center flex-wrap gap-3 w-100 w-md-none'>
-                                    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY" target='_blank' className="btn bg-gradient d-inline-flex align-items-center gap-2">
-                                        <img src={raydium} alt="" /> <span>Buy now</span>
-                                    </a>
-                                    <a href="https://jup.ag/swap/4kLRpxuNPzViyhW3cKm5D9c4g2AKzVe2dtLi5cfUPvrY-SOL" target='_blank' className="btn d-inline-flex align-items-center gap-2">
-                                        <img src={jup} alt="" /> <span>Buy now</span>
-                                    </a>
-                                </div>
-
-                                <ul className="socials d-flex align-items-center p-0 border-0 mb-5 mb-md-0">
-                                    {socials.map((item, index) => (
-                                        <li key={index}> <a href={item.url} target='_blank' className='d-flex align-items-center justify-content-center'>{item.icon}</a></li>
-                                    ))}
-                                    <div className='responsiveSocial'>
-                                        <ul className="socials d-flex align-items-center flex-wrap">
-                                            {socialsbanner.map((item, index) => (
-                                                <li key={index}> <a href={item.url} target='_blank'>{item.icon}</a></li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </ul>
-                            </div> */}
-                            {/* <CopyToClipboard /> */}
                         </div>
                     </Col>
                 </Row>

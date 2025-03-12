@@ -1,8 +1,6 @@
+import React, { useEffect, useState } from 'react'
 
-
-import { useEffect, useState } from 'react'
-
-export default function TimeLimit({ className = "", date = "2024-12-29T23:59:59" }) {
+export default function TimeLimit() {
     const endDate = new Date("2025-03-13T23:59:59");
 
     const calculateTimeLeft = () => {
@@ -32,18 +30,34 @@ export default function TimeLimit({ className = "", date = "2024-12-29T23:59:59"
     }, []);
 
     if (!timeLeft) {
-        return <div className="text-black text-center">Offer time ended</div>;
+        return <div className="text-white text-center">Offer time ended</div>;
     }
 
 
     return (
-        <div className={`${className} flex items-center justify-between w-full max-w-[395px] mx-auto min-h-[73px] rounded-[20px] h-5`}>
-            {Object.entries(timeLeft).map(([unit, value], index) => (
-                <div key={index} className='flex flex-col gap-3'>
-                    <p className='text-black text-sm font-medium !leading-[0%] capitalize'>{unit}</p>
-                    <span className='text-xl w-[42px] h-11 flex items-center justify-center text-black rounded-[11px] border-[1.066px] border-black bg-[#F3F3F3] shadow-[2px_2px_4px_0px_#B39A3F] !leading-[0%]'>{value}</span>
+        <div className='flex items-center scale-[.8] md:scale-100 -ml-2 justify-center w-full  min-h-[73px] rounded-[20px] h-5'>
+            {Object.keys(timeLeft).map((interval, index) => (
+                <div key={index} className="time-box text-center flex flex-col gap-3">
+                    <div className="text-black text-sm font-medium !leading-[0%] capitalize">{interval}</div>
+                    <div className="flex items-center text-center gap-[3px]">
+                        <span className={`block mx-1 ${index == 0 ? 'opacity-0 invisible' : null}`}>:</span>
+                        {timeLeft[interval]?.toString().split("").map((item, i) => (
+                            <div key={i} className="text-xl w-[42px] h-11 flex items-center justify-center text-black rounded-[11px] border-[1.066px] border-black bg-[#F3F3F3] shadow-[2px_2px_4px_0px_#B39A3F] !leading-[0%]">{item === "0" ? "0" : item}</div>
+                        ))}
+                    </div>
                 </div>
-            ))}
+            ))
+            }
+            {/* <div>
+                <div className={`${className} flex items-center justify-between w-full max-w-[395px] mx-auto min-h-[73px] rounded-[20px] h-5`}>
+                    {Object.entries(timeLeft).map(([unit, value], index) => (
+                        <div key={index} className=''>
+                            <p className='text-black text-sm font-medium !leading-[0%] capitalize'>{unit}</p>
+                            <span className='text-xl w-[42px] h-11 flex items-center justify-center text-black rounded-[11px] border-[1.066px] border-black bg-[#F3F3F3] shadow-[2px_2px_4px_0px_#B39A3F] !leading-[0%]'>{value}</span>
+                        </div>
+                    ))}
+                </div>
+            </div> */}
         </div>
     )
 }

@@ -80,13 +80,13 @@ export default function Banner() {
                             <p className='des'>Join us and become a part of Pepe Restaurante.</p>
                             <div className="flex flex-col lg:flex-row items-center gap-6">
                                 <div className="banner-card flex-[0_0_auto] text-black font-Helvetica w-full max-w-[513px] text-center py-4 md:py-7 px-4 md:px-8 rounded-3xl md:rounded-[32px] border-[1.5px] border-black bg-[#FFD331] backdrop-blur-[8px]">
-                                    <p className='text-white text-center text-[32px] font-black tracking-[0.64px] text-stroke mb-4'>PEPIZ Presale is live</p>
+                                    <p className='text-white text-center text-2xl md:text-3xl xl:text-[32px] font-black tracking-[0.64px] text-stroke mb-2 md:mb-4'>PEPIZ Presale is live</p>
                                     <TimeLimit />
-                                    <p className='text-sm font-Helvetica text-black my-4 mt-3 font-normal'>$PEPIZ Raised: <span className='text-lg font-black'>$1,474,661</span></p>
+                                    <p className='text-sm font-Helvetica text-black my-2 md:my-4 mt-1 md:mt-3 font-normal'>$PEPIZ Raised: <span className='text-lg font-black'>$1,474,661</span></p>
                                     <div className="line relative z-[1] w-full h-6 rounded-3xl overflow-hidden bg-black">
                                         <div className="absolute top-1/2 left-1 -translate-y-1/2 w-[50%] h-4 rounded-3xl z-[1] bg-[#CECC26]" ></div>
                                     </div>
-                                    <div className="my-4">
+                                    <div className="my-3 md:my-4">
                                         <div className="flex items-center justify-center gap-2 xl:gap-[10px] ">
                                             <p className='text-sm uppercase text-black font-Helvetica'>Your purchased $pepiz</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
@@ -100,7 +100,7 @@ export default function Banner() {
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <div className="flex items-center mt-3 justify-center gap-2 xl:gap-[10px] ">
+                                        <div className="flex items-center mt-2 md:mt-3 justify-center gap-2 xl:gap-[10px] ">
                                             <p className='text-sm uppercase  text-black font-Helvetica'>your stakeable $pepiz</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                                 <g clip-path="url(#clip0_7600_9435)">
@@ -125,7 +125,7 @@ export default function Banner() {
                                             </button>
                                         ))}
                                     </div>
-                                    <div className="max-w-max flex justify-between mt-[14px] mb-3 mx-auto relative z-[1]">
+                                    <div className="max-w-max flex justify-between mt-3 md:mt-[14px] mb-2 md:mb-3 mx-auto relative z-[1]">
                                         <div className="absolute top-1/2 -translate-y-1/2 left-full ml-2 w-[50px] md:w-[142px] h-[1px] bg-[#AC9334]"></div>
                                         <div className="absolute top-1/2 -translate-y-1/2 right-full mr-2 w-[50px] md:w-[142px] h-[1px] bg-[#AC9334]"></div>
                                         <p className='text-sm text-center font-medium !leading-[150%]  font-Helvetica inline-block'>1$PEPIZ = $0.369258</p>
@@ -154,7 +154,7 @@ export default function Banner() {
                                             </div>
                                         </div>
                                     </div>
-                                    <button className="btn !border-black !rounded-lg text-center my-4 mb-3 !font-Helvetica !font-normal h-full !text-base !py-4 !bg-white text-black !w-full !capitalize">
+                                    <button className="btn !border-black !rounded-lg text-center my-3 md:my-4 mb-3 !font-Helvetica !font-normal h-full !text-base !py-3 md:!py-4 !bg-white text-black !w-full !capitalize">
                                         Connect Wallet
                                     </button>
                                     <a href="#" target="_blank" rel="noopener noreferrer" className='text-[#010000] text-lg font-medium !underline'>Don’t have a wallet ?</a>
@@ -190,9 +190,9 @@ export default function Banner() {
                                         <span>Presaleshild </span>
                                     </p>
                                 </div>
-                                <div className="flex flex-col gap-[17px]">
-                                    <button className="btn !min-w-[162px] !border-black !rounded-lg text-center !font-Helvetica !font-normal h-full !text-base !py-4 !bg-white text-black w-full !capitalize">BUY </button>
-                                    <button className="btn !min-w-[162px] !border-black !rounded-lg text-center !font-Helvetica !font-normal h-full !text-base !py-4 !bg-white text-black w-full !capitalize">STAKE </button>
+                                <div className="flex flex-col w-full items-center gap-3 md:gap-[17px]">
+                                    <button className="btn !w-full md:!w-[162px] !border-black !rounded-lg text-center !font-Helvetica !font-normal h-full !text-base !py-3 md:!py-4 !bg-white text-black !capitalize">BUY </button>
+                                    <button className="btn !w-full md:!w-[162px] !border-black !rounded-lg text-center !font-Helvetica !font-normal h-full !text-base !py-3 md:!py-4 !bg-white text-black !capitalize">STAKE </button>
                                 </div>
                             </div>
 

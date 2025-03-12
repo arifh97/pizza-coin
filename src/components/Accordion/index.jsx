@@ -17,11 +17,11 @@ export default function Accordion({ items, activeItem = null }) {
             <span className=''>{item.title}</span>
             {activeIndex != index ? (
               <svg className='max-w-6 md:max-w-[33px]' width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_7625_62)">
+                <g clipPath="url(#clip0_7625_62)">
                   <rect x="0.5" y="0.5" width="32" height="32" rx="8" fill="#030200" />
-                  <g clip-path="url(#clip1_7625_62)">
-                    <path d="M16.3889 8.5V24.5" stroke="white" stroke-width="1.6" />
-                    <path d="M8.5 16.6111H24.5" stroke="white" stroke-width="1.6" />
+                  <g clipPath="url(#clip1_7625_62)">
+                    <path d="M16.3889 8.5V24.5" stroke="white" strokeWidth="1.6" />
+                    <path d="M8.5 16.6111H24.5" stroke="white" strokeWidth="1.6" />
                   </g>
                 </g>
                 <defs>
@@ -36,10 +36,10 @@ export default function Accordion({ items, activeItem = null }) {
 
             ) : (
               <svg className='max-w-6 md:max-w-[33px]' width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_7625_10)">
+                <g clipPath="url(#clip0_7625_10)">
                   <path d="M0.5 8.5C0.5 4.08172 4.08172 0.5 8.5 0.5H24.5C28.9183 0.5 32.5 4.08172 32.5 8.5V24.5C32.5 28.9183 28.9183 32.5 24.5 32.5H8.5C4.08172 32.5 0.5 28.9183 0.5 24.5V8.5Z" fill="#030200" />
-                  <g clip-path="url(#clip1_7625_10)">
-                    <path d="M8.5 16.4998H24.5" stroke="white" stroke-width="1.6" />
+                  <g clipPath="url(#clip1_7625_10)">
+                    <path d="M8.5 16.4998H24.5" stroke="white" strokeWidth="1.6" />
                   </g>
                 </g>
                 <defs>
@@ -51,8 +51,6 @@ export default function Accordion({ items, activeItem = null }) {
                   </clipPath>
                 </defs>
               </svg>
-
-
             )}
           </button>
           {activeIndex === index &&

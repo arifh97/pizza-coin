@@ -1,4 +1,4 @@
-import {React} from 'react'
+import { React } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import aboutBg from '../assets/img/aboutBg.jpg'
 import aboutTopShap from '../assets/img/aboutTopShap.png'
@@ -6,8 +6,8 @@ import aboutBottomShap from '../assets/img/aboutBottomShap.png'
 import coffe from '../assets/img/coffe.gif'
 import PageMarquee from './PageMarquee'
 import MarqueeBottom from './MarqueeBottom'
-export default function About(){
-    return(
+export default function About() {
+    return (
         <div className="about">
             <PageMarquee />
             <figure className='aboutTopShap'>
@@ -20,8 +20,8 @@ export default function About(){
                 <Row className='align-items-center'>
                     <Col lg={8}>
                         <div className="about-content">
-                           <h3>About Pepe Pizzeria</h3>
-                           <p><strong>"Pepe Pizzeria</strong> is the social layer and community meme coin of Solana. <strong> Everyone knows that Pepe's famous pizza</strong> with lots of cheese is a real success. Pepe, the pizzeria, is expanding worldwide, and everyone knows Pepe. That's why these pizzas will soon be on every table. <br/><strong> Be part of it early and benefit from this expansion.</strong>"</p>
+                            <h3>About Pepe Pizzeria</h3>
+                            <p><strong>"Pepe Pizzeria</strong> is the social layer and community meme coin of Solana. <strong> Everyone knows that Pepe's famous pizza</strong> with lots of cheese is a real success. Pepe, the pizzeria, is expanding worldwide, and everyone knows Pepe. That's why these pizzas will soon be on every table. <br /><strong> Be part of it early and benefit from this expansion.</strong>"</p>
                         </div>
                     </Col>
                 </Row>

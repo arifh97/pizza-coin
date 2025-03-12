@@ -26,7 +26,7 @@ export default function MarqueeTop() {
         img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20
     ]
     return (
-        <section className="marquee top border-y-[4px] border-solid border-black bg-white py-3 md:py-4 lg:py-5 xl:py-[30px]">
+        <section className="marquee top border-y-[4px] border-solid border-black bg-white py-[12px] md:py-[16px] lg:py-[20px] xl:py-[28px]">
             <Marquee direction="left" speed={50} loop={50} autoFill={true}>
                 {marqueeImgs.map((marqueeImg, index) => (
                     <figure key={index}>

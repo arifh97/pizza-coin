@@ -15,12 +15,41 @@ export default function Accordion({ items, activeItem = null }) {
         <div key={index} className={`accordion-item rounded-2xl border border-solid border-gray-100 overflow-hidden ${activeIndex === index ? 'bg-gray-100' : 'bg-transparent'} ${index === items.length - 1 ? 'mb-0' : 'mb-5 md:mb-6'}`}>
           <button onClick={() => toggleAccordion(index)} className={`accordion-button transition-none p-4 md:p-6 text-black text-start flex items-center justify-between w-full bg-transparent border-0 text-lg md:text-2xl !leading-normal font-normal ${activeIndex === index ? "!pb-0" : ""}`}>
             <span>{item.title}</span>
-            {activeIndex != index ? (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 12C24 11.4237 23.5328 10.9565 22.9565 10.9565H15.0435C13.9389 10.9565 13.0435 10.0611 13.0435 8.95652V1.04348C13.0435 0.467182 12.5763 0 12 0C11.4237 0 10.9565 0.467181 10.9565 1.04348V8.95652C10.9565 10.0611 10.0611 10.9565 8.95652 10.9565H1.04348C0.467182 10.9565 0 11.4237 0 12C0 12.5763 0.467181 13.0435 1.04348 13.0435H8.95652C10.0611 13.0435 10.9565 13.9389 10.9565 15.0435V22.9565C10.9565 23.5328 11.4237 24 12 24C12.5763 24 13.0435 23.5328 13.0435 22.9565V15.0435C13.0435 13.9389 13.9389 13.0435 15.0435 13.0435H22.9565C23.5328 13.0435 24 12.5763 24 12Z" fill="currentColor" />
+            {activeIndex != index ? (<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_7616_32)">
+                <rect x="0.5" y="0.5" width="32" height="32" rx="8" fill="#030200" />
+                <g clip-path="url(#clip1_7616_32)">
+                  <path d="M16.3889 8.5V24.5" stroke="white" stroke-width="1.6" />
+                  <path d="M8.5 16.6111H24.5" stroke="white" stroke-width="1.6" />
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_7616_32">
+                  <rect x="0.5" y="0.5" width="32" height="32" rx="8" fill="white" />
+                </clipPath>
+                <clipPath id="clip1_7616_32">
+                  <rect width="16" height="16" fill="white" transform="translate(8.5 8.5)" />
+                </clipPath>
+              </defs>
             </svg>
-            ) : (<svg width="24" height="4" viewBox="0 0 24 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.0435 0.956543H22.9565C23.5328 0.956543 24 1.42372 24 2.00002C24 2.57632 23.5328 3.0435 22.9565 3.0435H13.0435H10.9565H1.04348C0.467181 3.0435 0 2.57632 0 2.00002C0 1.42372 0.467182 0.956543 1.04348 0.956543H10.9565H13.0435Z" fill="currentColor" />
-            </svg>
+
+            ) : (<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_7616_10)">
+              <path d="M0.5 8.5C0.5 4.08172 4.08172 0.5 8.5 0.5H24.5C28.9183 0.5 32.5 4.08172 32.5 8.5V24.5C32.5 28.9183 28.9183 32.5 24.5 32.5H8.5C4.08172 32.5 0.5 28.9183 0.5 24.5V8.5Z" fill="#030200"/>
+              <g clip-path="url(#clip1_7616_10)">
+              <path d="M8.5 16.4998H24.5" stroke="white" stroke-width="1.6"/>
+              </g>
+              </g>
+              <defs>
+              <clipPath id="clip0_7616_10">
+              <path d="M0.5 8.5C0.5 4.08172 4.08172 0.5 8.5 0.5H24.5C28.9183 0.5 32.5 4.08172 32.5 8.5V24.5C32.5 28.9183 28.9183 32.5 24.5 32.5H8.5C4.08172 32.5 0.5 28.9183 0.5 24.5V8.5Z" fill="white"/>
+              </clipPath>
+              <clipPath id="clip1_7616_10">
+              <rect width="16" height="16" fill="white" transform="translate(8.5 8.5)"/>
+              </clipPath>
+              </defs>
+              </svg>
+              
             )}
           </button>
           {activeIndex === index &&

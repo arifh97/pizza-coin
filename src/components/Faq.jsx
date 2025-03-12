@@ -1,5 +1,5 @@
 import Accordion from './Accordion'
-import MarqueeTop from './MarqueeTop'
+// import MarqueeTop from './MarqueeTop'
 
 export default function Faq() {
 
@@ -23,7 +23,7 @@ export default function Faq() {
   ]
   return (
     <div className="faq bg-[#FFC446] relative z-[1]">
-      <MarqueeTop />
+      {/* <MarqueeTop /> */}
       <div className='container'>
         <div className="row justify-center">
           <div className="section-title text-center">

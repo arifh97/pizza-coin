@@ -13,7 +13,7 @@ export default function Accordion({ items, activeItem = null }) {
     <div className="Accordion">
       {items.map((item, index) => (
         <div key={index} className={`Accordion-item rounded-xl md:rounded-2xl border-2 border-dashed border-black bg-[#FEE974] overflow-hidden mb-[20px] last:mb-0`}>
-          <button onClick={() => toggleAccordion(index)} className={`Accordion-button transition-none p-[16px] lg:p-6 lg:py-4 text-[#1C1A1A] font-FormulaCondensedBold text-xl md:text-2xl lg:text-[28px] xl:text-[32px] font-black flex items-center justify-between w-full`}>
+          <button onClick={() => toggleAccordion(index)} className={`Accordion-button transition-none p-[16px] lg:p-6 text-[#1C1A1A] font-FormulaCondensedBold text-xl md:text-2xl lg:text-[28px] xl:text-[32px] font-black flex items-center justify-between w-full`}>
             <span className=''>{item.title}</span>
             {activeIndex != index ? (
               <svg className='max-w-6 md:max-w-[33px]' width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -13,13 +13,13 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Banner /> */}
-      {/* <About />
+      <Banner />
+      <About />
       <Tokenomics />
-      <Roadmap /> */}
+      <Roadmap />
       {/* <Contact /> */}
       <Faq />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

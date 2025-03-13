@@ -36,7 +36,7 @@ export default function Tokenomics() {
             <Container>
                 <Row>
                     <Col>
-                        <div className="section-title text-center">
+                        <div className="section-title text-center" data-aos="fade-up" >
                             <h2>Pizzerianomics</h2>
                         </div>
                     </Col>
@@ -44,15 +44,15 @@ export default function Tokenomics() {
                 <Row>
                     <Col>
                         <div className="tokenomics-content">
-                            <h4 className='text-center'>Total Supply <strong>480.000.000</strong></h4>
+                            <h4 className='text-center' data-aos="fade-up" data-aos-offset="-300">Total Supply <strong>480.000.000</strong></h4>
                             <div className="content-inner d-flex flex-wrap align-items-center justify-content-center">
                                 {tokenItems.map((item, index) => (
-                                    <div className={`inner-item cursor-pointer hover:scale-105 transition-all duration-500 item-${index + 1}`} key={index}>
+                                    <div data-aos="fade-up" data-aos-offset="-300" data-aos-delay={`${index+1}00`} className={`inner-item cursor-pointer hover:!scale-105 transition-all item-${index + 1}`} key={index}>
                                         <div className="info text-center">
                                             <h5>{item.title} <span className='d-block'>{item.value}</span></h5>
                                             {/* <img src={item.contentRImg} alt="" /> */}
                                         </div>
-                                        <img className='pizzaItemBG' src={tokenPizzaSlize} alt="" />
+                                        <img className='pizzaItemBG pointer-events-none' src={tokenPizzaSlize} alt="" />
                                         {item.tokensiImg ? (<img className='tokensiImg' src={item.tokensiImg} alt="" />) : ''}
                                     </div>
                                 ))}

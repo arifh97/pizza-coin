@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
+import pdf from '../assets/whitepaper.pdf'
 
 import logo from '../assets/img/logo.png'
 import Social from './Social';
@@ -65,7 +66,7 @@ export default function Header() {
               <Link to="about" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >ABOUT</Link>
               <Link to="tokenomics" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >PIZZAnomics</Link>
               <Link to="roadmap" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >Roadmap</Link>
-              <a href='#' target='_blank' className='heading-link text-uppercase'>White paper</a>
+              <a href={pdf} target='_blank' className='heading-link text-uppercase'>White paper</a>
               <Link to="faq" className='heading-link text-uppercase' spy={true} smooth={true} offset={-150} duration={600} >FAQ</Link>
             </ul>
             <div className="forResponsive d-lg-none mt-4">

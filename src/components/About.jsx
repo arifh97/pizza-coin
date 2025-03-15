@@ -5,7 +5,7 @@ import aboutTopShap from '../assets/img/aboutTopShap.png'
 import aboutBottomShap from '../assets/img/aboutBottomShap.png'
 import coffe from '../assets/img/coffe.gif'
 import PageMarquee from './PageMarquee'
-import MarqueeBottom from './MarqueeBottom'
+// import MarqueeBottom from './MarqueeBottom'
 export default function About() {
     return (
         <div className="about">
@@ -30,7 +30,7 @@ export default function About() {
             <figure className='aboutBottomShap'>
                 <img src={aboutBottomShap} alt="" />
             </figure>
-            <MarqueeBottom />
+            {/* <MarqueeBottom /> */}
         </div>
     )
 }

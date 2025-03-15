@@ -48,16 +48,6 @@ export default function TimeLimit() {
                 </div>
             ))
             }
-            {/* <div>
-                <div className={`${className} flex items-center justify-between w-full max-w-[395px] mx-auto min-h-[73px] rounded-[20px] h-5`}>
-                    {Object.entries(timeLeft).map(([unit, value], index) => (
-                        <div key={index} className=''>
-                            <p className='text-black text-sm font-medium !leading-[0%] capitalize'>{unit}</p>
-                            <span className='text-xl w-[42px] h-11 flex items-center justify-center text-black rounded-[11px] border-[1.066px] border-black bg-[#F3F3F3] shadow-[2px_2px_4px_0px_#B39A3F] !leading-[0%]'>{value}</span>
-                        </div>
-                    ))}
-                </div>
-            </div> */}
         </div>
     )
 }

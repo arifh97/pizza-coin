@@ -1,23 +1,23 @@
-.marquee {
+.custom-marquee {
     position: relative;
     overflow-x: hidden;
-}
-.marquee.top {
-    position: absolute;
-    top: 0;
-    left: 0;
+    &.top {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &.bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 }
 
-.marquee.bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
 .rfm-child img {
-    @include md{
+    @include md {
         max-width: 160px;
     }
-    @include sm{
+    @include sm {
         max-width: 145px;
     }
 }

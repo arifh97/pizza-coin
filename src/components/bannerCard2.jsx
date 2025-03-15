@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import e_img_2 from '../assets/img/exchange-pepeto.png';
-// import Ellipse from '../assets/img/Ellipse 209.png'
-
 import coin from '../assets/img/piz-coin.png'
 
 export default function bannerCard2({ className }) {
@@ -28,7 +26,7 @@ export default function bannerCard2({ className }) {
         return () => clearTimeout(timer);
     }, [timeLeft]);
 
-    // sol
+    sol
     const [solAmount, setSolAmount] = useState(0.00);
     const [pepetoAmount, setPepetoAmount] = useState(0.00);
     const conversionRate = 67500; // 1 SOL = 1500000 PEPETO
@@ -107,7 +105,7 @@ export default function bannerCard2({ className }) {
         setSolAmount((pepeto / conversionRate).toFixed(2));
     };
 
-    // usdt
+    usdt
     const [solAmountTwo, setSolAmountTwo] = useState(null);
     const [pepetoAmountTwo, setPepetoAmountTwo] = useState(null);
     const conversionRateTwo = 500; // 1 SOL = 10000 PEPETO
@@ -195,7 +193,7 @@ export default function bannerCard2({ className }) {
                             <a href="https://phantom.com/" target="_blank" rel="noopener noreferrer" className='text-[#010000] text-lg font-medium !underline'>Don’t have a wallet ?</a>
                             <p className='font-medium !leading-[150%] mx-auto mt-1 flex items-center justify-center gap-1 text-black'>
                                 <span>Powered by</span>
-                                <div className="icon">
+                                <span className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                         <g clipPath="url(#clip0_7600_9492)">
                                             <circle cx="8.16602" cy="8.27124" r="8" fill="#A7A7F0" />
@@ -221,7 +219,7 @@ export default function bannerCard2({ className }) {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                </div>
+                                </span>
                                 <span>Presaleshild </span>
                             </p>
                         </div>

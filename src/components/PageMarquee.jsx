@@ -1,4 +1,5 @@
 import React from 'react'
+
 import img1 from '../assets/img/marquee/1.png'
 import img2 from '../assets/img/marquee/2.png'
 import img3 from '../assets/img/marquee/3.png'
@@ -21,19 +22,17 @@ import img19 from '../assets/img/marquee/19.png'
 import img20 from '../assets/img/marquee/20.png'
 import Marquee from "react-fast-marquee";
 
-export default function MarqueeTop() {
+export default function PageMarquee() {
     const marqueeImgs = [
-        img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20
+        img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20
     ]
     return (
-        <section className="marquee top border-y-[4px] border-solid border-black bg-white py-[12px] md:py-[16px] lg:py-[20px] xl:py-[28px]">
-            <Marquee direction="left" speed={50} loop={50} autoFill={true}>
-                {marqueeImgs.map((marqueeImg, index) => (
-                    <figure key={index}>
-                        <img src={marqueeImg} className='mr-10' alt="" />
-                    </figure>
+        <div className="hidden md:block custom-marquee top border-y-[4px] border-solid border-black bg-white py-[12px] md:py-[16px] lg:py-[20px] xl:py-[28px]">
+            <Marquee direction='left' speed={60} autoFill={true}>
+                {marqueeImgs.map((item, index) => (
+                    <img key={index} src={item} className='mr-10' alt="" />
                 ))}
             </Marquee>
-        </section>
+        </div>
     )
 }

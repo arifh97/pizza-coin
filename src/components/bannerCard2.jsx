@@ -1,135 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import e_img_2 from '../assets/img/exchange-pepeto.png';
+// import Ellipse from '../assets/img/Ellipse 209.png'
+
 import coin from '../assets/img/piz-coin.png'
 
 export default function bannerCard2({ className }) {
-    const endDate = "2025-4-2 23:59:59";
-    const calculateTimeLeft = () => {
-        const difference = +new Date(endDate) - +new Date();
-        let timeLeft = {};
-        if (difference > 0) {
-            timeLeft = {
-                days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                minutes: Math.floor((difference / 1000 / 60) % 60),
-                seconds: Math.floor((difference / 1000) % 60),
-            };
-        }
-        return timeLeft;
-    };
-
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setTimeLeft(calculateTimeLeft());
-        }, 1000);
-        return () => clearTimeout(timer);
-    }, [timeLeft]);
-
-    sol
-    const [solAmount, setSolAmount] = useState(0.00);
-    const [pepetoAmount, setPepetoAmount] = useState(0.00);
-    const conversionRate = 67500; // 1 SOL = 1500000 PEPETO
-
-
-
-    const handleSolChangeTwo = (e) => {
-        const inputValue = e.target.value;
-
-        if (inputValue == "") {
-            e.target.type = "text"
-            setSolAmountTwo("");
-            setPepetoAmountTwo("")
-            return;
-        } else {
-            e.target.type = "number"
-        }
-        let solTwo = parseFloat(e.target.value);
-        if (isNaN(solTwo)) {
-            solTwo = 0;
-        } else {
-            solTwo = parseFloat(solTwo.toFixed(2));
-        }
-        setSolAmountTwo(solTwo);
-        setPepetoAmountTwo((solTwo * conversionRateTwo).toFixed(0));
-    }
-    const handlePepetoChangeTwo = (e) => {
-        const pepetoTwo = parseFloat(e.target.value) || 0;
-        setPepetoAmountTwo(pepetoTwo);
-        setSolAmountTwo(pepetoTwo / conversionRateTwo);
-    }
-
-
-    const handleSolChange = (e) => {
-        const inputValue = e.target.value;
-        if (inputValue == "") {
-            e.target.type = "text"
-            setSolAmount("");
-            setPepetoAmount("")
-            return;
-
-        } else {
-            e.target.type = "number"
-        }
-        let sol = parseFloat(inputValue);
-        if (isNaN(sol)) {
-
-            sol = 0;
-        } else {
-            sol = parseFloat(sol.toFixed(2));
-        }
-        setSolAmount(sol);
-        setPepetoAmount((sol * conversionRate).toFixed(0));
-    };
-
-    const handlePepetoChange = (e) => {
-
-        const inputValue = e.target.value;
-        let pepeto = parseFloat(inputValue);
-        if (inputValue == "") {
-            e.target.type = "text"
-            setSolAmount("");
-            setPepetoAmount("")
-            return;
-
-        } else {
-            e.target.type = "number"
-        }
-        if (isNaN(pepeto)) {
-            pepeto = 0;
-        } else {
-
-            pepeto = parseFloat(pepeto.toFixed(0));
-        }
-        setPepetoAmount(pepeto);
-        setSolAmount((pepeto / conversionRate).toFixed(2));
-    };
-
-    usdt
-    const [solAmountTwo, setSolAmountTwo] = useState(null);
-    const [pepetoAmountTwo, setPepetoAmountTwo] = useState(null);
-    const conversionRateTwo = 500; // 1 SOL = 10000 PEPETO
-    const [isBuy, setIsBuy] = useState(false);
-    const [tokenAddress, setTokenAddress] = useState('GVUE6se8FUnhcyF1Sg9mdKeTLeHBc18MEAKgHKw4Ucr9')
-    const [copied, setCopied] = useState(false);
-    const copyHandle = () => {
-        navigator.clipboard.writeText(tokenAddress);
-        setCopied(true);
-        setTimeout(() => {
-            setCopied(false)
-        }, 3000)
-    }
-
-    const [isSol, setIsSol] = useState(true);
-    const tabHandleChange = (e) => {
-        setIsSol(!isSol);
-        setSolAmount(0)
-        setSolAmountTwo(0)
-        setPepetoAmount(0)
-        setPepetoAmountTwo(0)
-        setTokenAddress(e);
-    }
-
+    
     const data = [
         {
             title: "Currently Staked",
@@ -168,16 +44,6 @@ export default function bannerCard2({ className }) {
                         <div className="exchange-wrap">
                             <div className="exchange-item ">
                                 <h4 className='text-black text-lg font-medium font-Helvetica mb-3 text-center'>My Staking</h4>
-                                <div className="banner-btn max-h-12 shadow-[0px_4px_8px_0px_#C6A52C] w-full flex flex-row-reverse justify-between">
-                                    <div className="icon"><img src={e_img_2} alt="" /></div>
-                                    <input onFocus={e => {
-
-                                        if (e.target.value == "0") {
-                                            e.target.type = "text"
-                                            setPepetoAmount("")
-                                        }
-                                    }} onChange={handlePepetoChange} type="number" min="0.1" step="0.1" className='bg-transparent border-0 p-0' value={pepetoAmount} />
-                                </div>
                                 <div className="grid grid-cols-2 gap-[12px] my-[16px]">
                                     <div className="single">
                                         <button className='flex max-h-8 justify-between items-center w-full text-sm px-[13px] py-[11px] rounded-lg !border !border-[#AC9334] bg-[rgba(255,255,255,0.10)]'><span>Max can stake</span> <span>0</span></button>
@@ -193,7 +59,7 @@ export default function bannerCard2({ className }) {
                             <a href="https://phantom.com/" target="_blank" rel="noopener noreferrer" className='text-[#010000] text-lg font-medium !underline'>Don’t have a wallet ?</a>
                             <p className='font-medium !leading-[150%] mx-auto mt-1 flex items-center justify-center gap-1 text-black'>
                                 <span>Powered by</span>
-                                <span className="icon">
+                                <div className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                         <g clipPath="url(#clip0_7600_9492)">
                                             <circle cx="8.16602" cy="8.27124" r="8" fill="#A7A7F0" />
@@ -219,7 +85,7 @@ export default function bannerCard2({ className }) {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                </span>
+                                </div>
                                 <span>Presaleshild </span>
                             </p>
                         </div>
